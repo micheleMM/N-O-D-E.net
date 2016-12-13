@@ -1,0 +1,139 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HOW TO BUILD A POCKET PIRATEBOX<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>After looking inside the case of a travel router I was using as a PirateBox, I was shocked just how much space wasn&#39;t being used up. This got me thinking about how I could make it even smaller and the Pocket PirateBox is the result.</p>
+
+                <p>This little guide explains how to make a self powered credit card sized PirateBox for anonymous offline file-sharing and communications. All the parts are cheap and easy to find.</p>
+
+                <p>You could easily modify this to run LibraryBox (which has Mesh Networking built in) or perhaps even the Personal Onion Router To Assure Liberty to have on demand TOR access.</p>
+
+                <img src="https://i.imgur.com/mG8O3qU.png">
+
+
+                <p class="subtitle">PARTS</p>
+
+                <p>- TP-LINK TL-MR3020 3G/4G Wireless N150 Portable Router<br>
+                - Adafruit PowerBoost 500 Basic - 5V USB Boost @ 500mA from 1.8V+<br>
+                - Kingston FCR-MRG2 USB MicroSDHC card reader<br>
+                - MicroSD card (16GB+ recommended)<br>
+                - Mini USB Type B Plug Male 180 Degree Connector<br>
+                - Plastic identity badge holder (or whatever case you want)<br>
+                - Adafruit Lithium Ion Polymer Battery - 3.7v 500mAh (size up to you)<br>
+                - Basic single core wires<br>
+                - Insulating tape</p>
+
+
+                <p class="subtitle">TOOLS</p>
+
+                <p>- Soldering iron<br>
+                - Desolder pump<br>
+                - Solder wick/tape (optional)<br>
+                - Wire cutters / strippers<br>
+                - Hot glue gun (optional)</p>
+
+
+
+                <p class="subtitle">HOW-TO GUIDE</p>
+
+                <p>Step 1. First you need to get a MicroSD card and set up your PirateBox. Follow <a target="_blank" href="https://piratebox.cc/openwrt:diy">this how-to</a> and come back once you&#39;re up and running. Remember we&#39;re using the MR3020 so follow those specific instructions.</p>
+
+                <p>Step 2. Unplug all the connectors from your router and put the MicroSD card somewhere safe. Do not erase/overwrite the contents of the card or you will fuck your router up. It will be very difficult to restore.</p>
+
+                <p>Step 3. Take a little screwdriver or something similar and pry off the top grey part of the case. Be careful not to damage the board inside when you&#39;re poking around. (<a href="https://i.imgur.com/Jk7eql6.png" target="_blank">view photo</a>)</p>
+
+                <p>Step 4. Remove the board from the casing. There is some glue on the underside so be careful not to yank it out. (<a href="https://i.imgur.com/fM9QaIt.png" target="_blank">view photo</a>)</p>
+
+                <p>Step 5. Desolder the connections for the ethernet and USB ports and remove the connectors. We won&#39;t be needing them anymore, so you can bend and break to get them free. Just be careful. (<a href="https://i.imgur.com/mfq1Ooe.png" target="_blank">view photo</a>)</p>
+
+                <p>Step 6. Now we need to wire the USB MicroSD card reader to the board. This part was very challenging for me and quite fiddly. First, solder the correct wire colors to the metallic connection areas on the USB MicroSD reader. Then you have to solder in those wires to the correct areas on the board. I used USBPinout.net to help me here. (<a href="https://i.imgur.com/YelfrMe.png" target="_blank">view photo</a>)</p>
+
+                <p>Once in place, I bent the card reader over and thankfully it fit perfectly in a little nook on the board. I then added some hot glue to keep it in place. Be careful to check that none of the exposed wires are touching.</p>
+
+                <p>Oh yeah I also added some insulation tape around the MicroSD reader to stop possible shorting.</p>
+
+                <p>Step 7. Power up and cross your fingers! If it boots up properly and you can connect, move on to the next step.</p>
+
+                <p>Step 8. We now have to add a custom mini USB connector to our Adafruit PowerBoost board. What this does is makes sure the power output from the battery is at 5v and plays well with the router board. (<a href="https://i.imgur.com/teC7KhO.png" target="_blank">view photo</a>)</p>
+
+                <p>This is also pretty fiddly work so be patient. The wires are very short (especially for ground). I soldered the wires in a right angle configuration so it would fit into the plastic pouch, but you can obviously do it however you want.</p>
+
+                <p>Step 9. The moment of truth. Connect the PowerBoost USB connector into the MR3020, then connect the battery to the JST connector on the PowerBoost.</p>
+
+                <p>It should (hopefully) power up and start working. Stuff it into whatever case you want and off you go! (<a href="https://i.imgur.com/FTAOlcG.png" target="_blank">view photo</a>)</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

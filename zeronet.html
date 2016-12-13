@@ -1,0 +1,136 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                THE ZERONET INTERVIEW: RETHINKING THE INTERNET<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>I recently spoke to Tamas, the creator of ZeroNet [https://github.com/HelloZeroNet/ZeroNet], an interesting project which aims to change the way our internet is constructed and accessed. This is definitely one to keep an eye on.</p>
+
+                <img src="http://i.imgur.com/P3GOenG.png">
+
+
+                <p class="subtitle">THE INTERVIEW</p>
+
+                <p>[N-] Can you explain what ZeroNet is for those who haven&#39;t heard?</p>
+
+                <p>[TA] ZeroNet is a decentralized web platform using Bitcoin cryptography and BitTorrent network. Using it you can create dynamic websites without any central server or hosting costs. All visitor automatically become host of your site.</p>
+
+                <p>[N-] How do the technologies of Bitcoin and BitTorrent work with ZeroNet?</p>
+
+                <p>[TA] The Bitcoin cryptography is used to verify the content of the site. It makes sure the P2P downloaded files are created by the site owner and also secures from man-in-the-middle attacks. The BitTorrent network is used to gathering peers, the file transfer protocol is different from BitTorrent&#39;s.</p>
+
+                <p>[N-] How is it different from projects like Maidsafe or BitTorrent&#39;s Project Maelstrom?</p>
+
+                <p>[TA] As comparison of BitTorrent Maelstrom: ZeroNet is open source, works in any browser/OS, and allows real time updated, dynamic content. ZeroNet focuses on simplicity and the user experience. The current protocol is really simple and has it own limits, it will be possible later to use MaidSafe or similar networks to extend ZeroNet possibilities.</p>
+
+                <p>[N-] How does it deal with issues like privacy and anonymity?</p>
+
+                <p>[TA] The privacy is better in ZeroNet compared to traditional web: Every page is served from localhost, so the site owner can&#39;t spy on users browsing habits. ZeroNet is no more anonymous than Bittorrent, but it works really well using the Tor anonymity network, so you can hide your IP address if you want.</p>
+
+                <p>[N-] Is that the same for when you host a website too?</p>
+
+                <p>[TA] Yes, every visitor is also hosting the site, so everyone is equal, it does not matter if you are the site owner or just a visitor.</p>
+
+                <p>[N-] Have you seen many users so far?</p>
+
+                <p>[TA] There is no way to measure the total number, but there is more than 1000 messages in the Guestbook of the ZeroNet (ZeroBoard) and more than 150 user registered to ZeroTalk forum.</p>
+
+                <p>[N-] How is ZeroNet development progressing?</p>
+
+                <p>[TA] The development only started a bit more than 4 months ago, so its still a new project. In the latest months many important feature added: Multi-user sites, Namecoin .bit domain support, Tor anonymity network support, Built in SQL server and many other improvements.</p>
+
+                <p>Currently working on to make multi-user site creating an easier process and after that I will try to focus on new sites: Encrypted email-like messaging, P2P Github, Marketplace, and similar ideas.</p>
+
+                <p>[N-] That&#39;s great news. I think native support for .bit domains could be something that could make a censorship-resistant web a mainstream reality. What else do you think is going to make ordinary users change their habits to get involved with something like this?</p>
+
+                <p>[TA] From users perspective: the site is loaded from your computer, so yourinternet connection is does not affects the page load speed. Most interest are from countries (China, Russia) where the internet is censored and neutrality is more problematic than in the northern world.</p>
+
+                <p>So summing it up the benefits are mostly for the content publishers:
+                uncensorable, impossible modify your site without the private key, no hosting costs, distributed over the planet, no way to shut it down or attack.</p>
+
+                <p>[N-] Are there any plans for a simple 1-click install for non-technical users?</p>
+
+                <p>[TA] There is a portable ZeroBundle package for Windows: You have to download and extract a zip file (https://github.com/HelloZeroNet/ZeroBundle/releases/download/0.1.0/ZeroBundle-v0.1.0.zip) to any directory, then you can start it by executing zeronet.cmd. There is a plan for a single  exe file, and similar package for OSX, but unfortunately I don&#39;t have access to any Mac computer.</p>
+
+                <p>[N-] How can people get involved with the project? Are you looking for contributors?</p>
+
+                <p>[TA] Yes there is many open issues on github [https://github.com/HelloZeroNet], looking for coders who was experience in python coding and P2P networks. There is a plugin system in ZeroNet that allows anyone to extend it with new features without touching the main source code.</p>
+
+                <p>More importantly: ZeroNet is useless without content, so if you know html/css/javascript it is a good way to contribute to project. There is a documentation on project&#39;s github site among with some example sites (blog, forum) and I&#39;m happy to answer any question. I&#39;m frequently at irc: (nofish) #zeronet@freenode</p>
+
+                <p>[N-] Awesome, thanks Tamas.</p>
+
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

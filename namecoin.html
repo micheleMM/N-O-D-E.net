@@ -1,0 +1,161 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                THE NAMECOIN INTERVIEW: CENSORSHIP-RESISTANT INFORMATION<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>After Bitcoin, Namecoin has to be my next favorite cryptocurrency, mainly because of the untapped potential of a system that is geared directly towards distributed, censorship-resistant information.</p>
+
+                <p>I spoke to Daniel Kraft, the chief scientist and main client developer on the project to find out more about the system, his motivations, and where he thinks Namecoin will be going.</p>
+
+
+                <p class="subtitle">THE INTERVIEW</p>
+
+                <p>[N-] For thos who don&#39;t know, who are you and what do you do for Namecoin?</p>
+
+                <p>[DK] I&#39;m a third-year PhD student of applied mathematics at the University of Graz.  While my research is not related to cryptography or even computer science (besides using a computer for numerical calculations), I&#39;ve also a strong interest in these fields.</p>
+
+                <p>Currently, I&#39;m the main client developer for Namecoin (as well as the initiator of NameID).  I took over this role about a year ago, and recently finished a complete reimplementation of the Namecoin client on top of the modern Bitcoin 0.10 codebase. This will become the next version of the Namecoin client, and is already usable (in parallel to
+                the existing 0.3.80 client).</p>
+
+                <p>[N-] How did you get involved in the cryptocurrency/P2P world?</p>
+
+                <p>[DK] I read about Bitcoin (and later also Namecoin) in mid-2011.  (It was after the initial “bubble” in that year, though, and I only got to know about that bubble in early 2013.)  The concepts and techniques immediately impressed me, but I didn&#39;t really believe there could be a chance for &quot;mainstream adoption&quot; until early 2013.  Since then, I&#39;m more actively involved (particularly in the Namecoin community).</p>
+
+                <p>[N-] There&#39;s been some interesting applications of the Namecoin blockchain (identity, messaging, DNS etc). What other potential do you think it holds?</p>
+
+                <p>[DK] There are a few more ideas in discussion, see also [https://wiki.namecoin.info/index.php?title=GSoC_2015_Project_Ideas].  I, personally, believe that the proposal for file/download verification (without the need to download a separate .asc or .gpg signature file) is very interesting.  I could also very well imagine that Namecoin&#39;s censorship-resistant and decentralised database could be used for a next-generation Torrent tracker in the future.</p>
+
+                <p>And, of course, there are surely a lot of applications noone has even thought about for now.</p>
+
+                <p>[N-] For those out there thinking of developing decentralized apps, what reasons do you think it&#39;d be beneficial to use Namecoin, say, instead of creating their own blockchain?</p>
+
+                <p>[DK] I would like to distinguish two cases here:</p>
+
+                <p>1) If your app actually needs something that Namecoin already covers (DNS or online identities), then it is definitely a good idea to not only use the Namecoin blockchain but actually use Namecoin&#39;s community standards.  (Unlike, for instance, OneName.)  This ensures that domains or identities are interoperable and generate the greatest use for both their owners and the systems in which they are used.</p>
+
+                <p>2) Even if you &quot;just&quot; need Namecoin&#39;s ability to do decentralised name-value storage with a completely new usecase, it is a good idea to use Namecoin instead of rolling your own blockchain.  With Namecoin, you can build on an established system – we already have battle-hardened and maintained code, a working and tested protocol and, last but not least, a good fraction of Bitcoin&#39;s hash power that merge-mines Namecoin (Namecoin has one of the largest difficulties beside Bitcoin itself). If you tried to build all that from scratch, it would be a tremendous effort.  And even if you &quot;just&quot; try to fork the existing code and bootstrap your own blockchain, you still need at least to convince big mining pools to adopt your blockchain.  This alone is a good reason not to try it.</p>
+
+                <p>[N-] What made you concentrate on Namecoin instead of going all-in for Bitcoin?</p>
+
+                <p>[DK] To be clear, investment-wise I&#39;m mostly in Bitcoin.  (But I&#39;m not a big investor, Bitcoin is not the majority of my portfolio.  I don&#39;t see &quot;getting rich quick&quot; as the main point of cryptocurrencies, and particularly not of Namecoin.)</p>
+
+                <p>If you are asking about concentration of my development efforts, then it is because I felt that Namecoin has even more interesting potential, and also that there are already &quot;enough&quot; developers concentrating on Bitcoin (at least in comparison to Namecoin, which mostly lacks manpower).  That said, I&#39;ve also contributed some patches to the recent Bitcoin 0.10 release (some of which were born out of things I did initially for Namecoin).</p>
+
+                <p>[N-] What do you think of services like OneName?</p>
+
+                <p>[DK] They have very good marketing and, of course, increase knowledge about Namecoin.  However, the problem I have with them is that they created their own namespace u/ (and squatted thousands of names there) instead of using id/ which had been agreed upon by the community (with projects like NameID in existence) long before OneName appeared.  This is just bad for everyone, since it fragments manpower, causes confusion and actually requires users to get multiple identities when the sole point of projects like these is to have a *single* one.</p>
+
+                <p>I as well as others in the community have been in contact with them from time to time, but my (personal!) impression is that they are not really interested in cooperating to resolve this issue.</p>
+
+                <p>[N-] Do you have any idea on how many Namecoin users there are?</p>
+
+                <p>[DK] Not really, but I think someone did a network scan once and the number was around 1,000 to 2,000 nodes in the P2P network.</p>
+
+                <p>[N-] One of the sticking points with the DNS side of Namecoin is domain squatting. Of course anyone is free to buy what they like, but could this be hinderance to further adoption?</p>
+
+                <p>[DK] You are right, this comes up a lot as the main point of criticism.  I believe it is not an issue and instead just used without understanding the real situation.</p>
+
+                <p>It is true that a very large fraction of d/ names in existence does not resolve to a domain, but is instead &quot;squatted&quot;.  However, I don&#39;t think that this is a problem.  The real &quot;problem&quot; is that almost no user is currently able to browse .bit domains, and thus they aren&#39;t very valuable.  This (and not squatting) is the main reason why almost noone cares so far to set up actual websites at .bit domains.</p>
+
+                <p>I know some of the squatters, and my impression is that they are concerned about Namecoin&#39;s future success more than maximising their own profit.  This even goes so far that I definitely know that at least some of them would gladly hand out their domains *for free* if someone is serious about setting up a website with them (instead of just &quot;reserving&quot; or &quot;squatting&quot; them themselves).</p>
+
+                <p>[N-] Outside of Namecoin, are there any other developments in the P2P world that excite you?</p>
+
+                <p>[DK] I&#39;m a frequent user of Tor.  On the more economic side, obviously Bitcoin is also a favourite of mine.  Besides that, OpenBazaar seems to be really interesting.</p>
+
+                <p>[N-] What does the future hold for Namecoin?</p>
+
+                <p>[DK] We are right now working on making Namecoin resolvers more accessible and light-weight.  There are proposals that would enable to resolve names in an almost trustless manner (so no central service) without the need to download and process the blockchain.  This will enable .bit browsing (as well as using of IDs for secure messaging) as easy to install as a browser extension or even on a mobile device.</p>
+
+                <p>Another issue is working on more usecases for Namecoin than d/ and id/. As I&#39;ve already written, there are some interesting ideas already in existence – in addition, I&#39;m sure that developers will also come up with even completely new uses.</p>
+
+                <p>[N-] Very cool. Yeah it would be great to have an all-in-one bundle that installs the namecoin client + a system-wide way to automatically remap .bit domains.</p>
+
+                <p>[DK] This is in discussion, and might &quot;soon&quot; appear. :)</p>
+
+                <p>[N-] Is there anything else you&#39;d like to add? Are you looking for development help / donations? How can people get involved with Namecoin?</p>
+
+                <p>[DK] Of course, we are very grateful for any donations (directed best to phelix&#39; NMDF “Namecoin Marketing and Development Fund”) and, even more important, development help.  Developers need not even be familiar with the deep internals of the codebase, since they can equally well work on building their own projects on top of Namecoin (as we have discussed already).  Apart from that, we&#39;re currently looking for people to run stable high-capacity nodes as well as DNS seeds.</p>
+
+                <p>To get involved, the best way is to contact us in the forum [https://forum.namecoin.info].  But also #namecoin or #namecoin dev on Freenode is a good place to start and get in contact.</p>
+
+                <p>In any case, the GSoC ideas list [https://wiki.namecoin.info/index.php?title=GSoC_2015_Project_Ideas] is a good place to start as well.</p>
+
+                <p>[N-] Awesome, thanks Daniel! I&#39;m looking forward to where the project goes next :)</p>
+
+
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

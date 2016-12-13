@@ -1,0 +1,142 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HIDING MESSAGES IN PLAINSIGHT<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This guide will show you how to hide messages in other text using the plainsight command line utility. It takes a large piece of text, like an ebook, along with a secret message, and deterministically creates a new piece of text gibberish.</p>
+
+                <p>The author of the app says this is to provide a less obvious way to get around censorship than just sending an encrypted file. I&#39;m not sure how mathematically secure this is, but it is an interesting concept.</p>
+
+                <p>This guide was tested on a debian system, so do your own research if you&#39;re using something different.</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/NEKpHOWz2HI?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=NEKpHOWz2HI" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/plainsight/plainsight.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/plainsight/plainsight_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/plainsight.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+
+                <p class="subtitle">ENCIPHERING</p>
+
+                <p>Step 1. Make a new directory to hold the contents of this tutorial, then cd into it:</p>
+
+                <span class="code">mkdir ~/plainsight<br>
+                cd ~/plainsight</span>
+
+                <p>Step 2. Install plainsight</p>
+
+                <span class="code">sudo pip install plainsight</span>
+
+                <p>Step 3. We&#39;ll also need to install a couple extra python packages for it to work:</p>
+
+                <span class="code">sudo pip install bitstring progressbar</span>
+
+                <p>Step 4. We&#39;re going to use Shakespeare&#39;s Macbeth as the base text in our example. Download it from Project Gutenberg:</p>
+
+                <span class="code">curl -o ~/plainsight/macbeth.txt https://www.gutenberg.org/cache/epub/1129/pg1129.txt</span>
+
+                <p>Step 5. Type your secret message and output it to a file:</p>
+
+                <span class="code">echo ‘This is my super secret message. Papa bless&#39; > cleartext</span>
+
+                <p>Step 6. Now pipe that message through plainsight, using the macbeth text, then output that file and name it ciphertext.</p>
+
+                <span class="code">cat cleartext | plainsight -m encipher -f macbeth.txt > ciphertext</span>
+
+                <p>Step 7. Now read your newly encrypted file and you&#39;ll see it&#39;s made of gibberish words. The idea is that you can send this file over unsecured wires, and it will be pretty difficult to decipher.</p>
+
+                <span class="code">cat ciphertext</span><br>
+
+
+                <p class="subtitle">DECIPHERING</p>
+
+                <p>Step 1. Take the ciphertext file, pipe it through plainsight, now using the decipher option. We&#39;ll need the exact same macbeth text, and we&#39;ll output it to a new file called msg.</p>
+
+                <span class="code">cat ciphertext | plainsight -m decipher -f macbeth.txt > msg</span>
+
+                <p>Step 2. Now cat the msg file to reveal your original secret message.</p>
+
+                <span class="code">cat msg</span><br>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>So yeah, that&#39;s plainsight, an interesting way to hide text in the open. Remember that there will be some files left over that you might want to securely delete. </p>
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

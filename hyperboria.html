@@ -1,0 +1,154 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HYPERBORIA 101 - MOVING THROUGH THE MESH<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>Hyperboria is a network built as an alternative to the traditional Internet. In simple terms, Hyperboria can be thought of as a darknet, meaning it is running on top of or hidden from the existing Internet (the clearnet). If you have ever used TOR or I2P, it is a similar concept. Unlike the Internet, with thousands of servers you may interact with on a day-to-day basis, access to Hyperboria is restricted in the sense that you need specific software, as well as someone already on the network, to access it. After configuring the client, you connect into the network, providing you with access to each node therein.</p>
+
+                <img src="https://i.imgur.com/WF8CEM9.png">
+
+                <p class="subtitle">INTRODUCTION</p>
+
+                <p>Hyperboria isn&#39;t just any alternative network, it&#39;s decentralized. There is no central point of authority, no financial barrier of entry, and no government regulations. Instead, there is a meshnet; peer-to-peer connection with user controlled nodes and connected links. Commonly, mesh networks are seen in wireless communication. Access points are configured to link directly with other access points, creating multiple connections to support the longevity of the network infrastructure and the traffic traveling over it. More connections between nodes within the network is better than less here. With this topology, all nodes are treated equally. This allows networks to be set up inexpensively without the infrastructure needed to run a typical ISP, which usually has user traffic traveling up several gateways or routers owned by other companies.</p>
+
+                <p>But what is the goal of the Hyperboria network? With roots in Reddit&#39;s /r/darknetplan, we see that the existing Internet has issues with censorship, government control, anonymity, security, and accessibility. /r/darknetplan has a lofty goal of creating a decentralized alternative to the Internet as we know it through a scalable stack of commodity hardware and open source software. This shifts the infrastructure away from physical devices owned by internet service providers, and instead puts hardware in the hands of the individual. This in itself is a large undertaking, especially considering the physical distance between those interested in joining the network, and the complexities of linking them together.</p>
+
+                <p>While the ultimate idea is a worldwide wireless mesh connecting everyone, it won&#39;t happen overnight. In the meantime, physical infrastructure can be put in place by linking peers together over the existing Internet through an overlay network. In time with more participation, wireless coverage between peers will improve to the point where more traffic can flow over direct peer-to-peer wireless connections.</p>
+
+
+                <p class="subtitle">ADVANTAGES</p>
+
+                <p>The Hyperboria network relies upon a piece of software called cjdns to connect nodes and route traffic. Cjdns&#39; project page boasts that it implements &quot;an encrypted IPv6 network using public-key cryptography for address allocation and a distributed hash table for routing.&quot; Essentially, the application will create a tunnel interface on a host computer that acts as any other network interface (like an ethernet or wifi adapter). This is powerful in the way that is allows any existing services you might want to face a network (HTTP server, BitTorrent tracker, etc.) to run as long as that service is already compatible with IPv6. Additionally, cjdns is what is known as a layer 3 protocol, and is agnostic towards how the host connects to peers. It doesn&#39;t matter much if the peer we need to connect to is over the internet or a physical access point across the street.</p>
+
+                <p>All traffic over Hyperboria is encrypted end-to-end, stopping eavesdroppers operating rogue nodes. Every node on the network receives a unique IPv6 address, which is derived from that node&#39;s public key after the public/private keypair is generated. This eliminates the need for additional encryption configuration and creates an environment with enough IP addresses for substantial network expansion. As the network grows in size, the quality of routing also improves. With more active nodes, the number of potential routes increases to both mitigate failure and optimize the quickest path from sender to receiver.</p>
+
+                <p>Additionally, there are no authorities such as the Internet Assigned Numbers Authority (IANA) who on the Internet control features like address allocation and top level domains. Censorship can easily be diminished. Suppose someone is operating a node hosting content that neighboring nodes find offensive, so they refuse to provide access. As long as that node operator can find at least one person somewhere on the network to peer with, he can continue making his content accessible to the whole network.</p>
+
+
+                <p class="subtitle">PEERING</p>
+
+                <p>One of the main differences between Hyperboria and networks like TOR is how connection to the network is made. Out of the box, running the cjdns client alone will not provide access to anything.</p>
+
+                <p>To be able to connect to the network, everyone must find someone to peer with; someone already on Hyperboria. This peer provides the new user with clearnet credentials for his node (an ip address, port number, key, and password) and the new user enters them into his configuration file. If all goes to plan, restarting the client will result in successful connection to the peer, providing the user access to the network.</p>
+
+                <p>However, having just one connection to Hyperboria doesn&#39;t create a strong link. Consider what would happen if this node was experiencing an outage or was taken offline completely. The user and anyone connecting to him as an uplink into the network would lose access. Because of this, users are encouraged to find multiple peers near them to connect to.</p>
+
+                <p>In theory, everyone on the network should be running their node perpetually. If a user only launched cjdns occasionally, other nodes on the network will not be able to take advantage of routing through the user&#39;s node as needed.</p>
+
+                <p>With the peering system, there is no central repository of node information. Nobody has to know anyone&#39;s true identity, or see who is behind a particular node. All of the connections are made through user-to-user trust when establishing a new link. If for any reason a node operator were to become abusive to other nodes on the network, there is nothing stopping neighboring nodes from invalidating the credentials of the abuser, essentially kicking them off of the network. If any potential new node operator seemed malicious, other operators have the right to turn him away.</p>
+
+
+                <p class="subtitle">MESHLOCALS</p>
+
+                <p>The most important aspect of growing the Hyperboria network is to build meshlocals in geographically close communities. Consider how people would join Hyperboria without knowing about their local peers. Maybe someone in New York City would connect to someone in Germany, or someone in San Franscisco to someone in Philadelphia. This creates suboptimal linking as the two nodes in each example are geographically distant from each other.</p>
+
+                <p>The concept of a meshlocal hopes to combat this problem. Users physically close together are encouraged to form working groups and link their nodes together. Additionally, these users work together to seek new node operators with local outreach to grow the network. Further, meshlocals themselves can coordinate with one another to link together, strengthening regional areas.</p>
+
+                <p>Meshlocals can also offer more in-person communication, making it easier to configure wireless infrastructure between local nodes, or organize actions via a meetup. Many meshlocals have gone on to gain active followings in their regions, for example NYC Mesh and Seattle Meshnet.</p>
+
+
+                <p class="subtitle">INSIDE THE NETWORK</p>
+
+                <p>After connecting to Hyperboria, a user may be at a loss as to what he is able to do. All of these nodes are connected and working together, but what services are offered by the Hyperboria community, for the Hyperboria community? Unlike the traditional Internet, most services on Hyperboria are run non-commercially as a hobby.</p>
+
+                <p>For example, Hyperboria hosts Uppit: a Reddit clone, Social Node: a Twitter-like site,and HypeIRC: an IRC network. Some of these services may additionally be available on the clearnet, making access easy for those without a connection to Hyperboria. Others are Hyperboria-only, made specifically and only for the network.</p>
+
+                <p>As the network grows, more services are added while some fade away in favor of new ones or disrepair. This is all community coordinated after all; there is nothing to keep a node operator from revoking access to his node on a whim for any reason.</p>
+
+
+                <p class="subtitle">FUTURE</p>
+
+                <p>As previously mentioned, the ultimate goal of Hyperboria is to offer a replacement for the traditional Internet, built by the users. As it stands now, Hyperboria has established a core following and will see more widespread adoption as meshlocals continue to grow and support users.</p>
+
+                <p>Additionally, we see new strides in the development of cjdns with each passing year. As time has gone on, setup and configuration have becomes simpler for the end-user while compatibility has also improved. The more robust the software becomes, the easier it will be to run and keep running.</p>
+
+                <p>We also see the maturation of other related technologies. Wireless routers are becoming more inexpensive with more memory and processing power, suitable for running cjdns directly. We also see the rise of inexpensive, small form factor microcomputers like the Raspberry Pi and Beaglebone Black, allowing anyone to buy a functional, dedicated computer for the price of a small household appliance like an iron or coffee maker. Layer 2 technologies like B.A.T.M.A.N. Advanced are also growing, making easily-configurable wireless mesh networks simple to set up and work cooperatively with the layer 3 cjdns.</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>Hyperboria is an interesting exercise in mesh networking with an important end goal and exciting construction appealing to network professionals, computer hobbyists, digital activists, and developers alike.</p>
+
+                <p>It&#39;ll be interesting to see how Hyperboria grows over the next few years, and if it is indeed able to offer a robust Internet-alternative for all. Until then, we ourselves can get our hands dirty setting up hardware, developing software, and helping others do the same. With any luck, we will be able to watch it grow. One node at a time.</p>
+
+
+                <p class="subtitle">SOURCES</p>
+
+                <p>https://github.com/cjdelisle/cjdns<br>
+                https://docs.meshwith.me<br>
+                https://www.reddit.com/r/darknetplan/comments/1vq87d/project_meshnet_for_everyone_a_complete<br>
+                https://www.reddit.com/r/dorknet/comments/xry23/this_is_my_first_time_hearing_about_darknet_i/</p>
+
+                <p>--<br>
+                BY <a href="https://twitter.com/famicoman" target="_blank">MIKE DANK</a></p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

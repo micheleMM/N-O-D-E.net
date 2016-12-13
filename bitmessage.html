@@ -1,0 +1,170 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                BITMESSAGE 101: P2P PRIVATE MESSAGING<br>
+                --
+                </div>
+
+                <div id="post">
+                <p>First appearing in 2012, Bitmessage is a project promising truly private, trustless, and completely peer-to-peer messaging. I think it has massive potential, and more people should know about it.</p>
+
+                <p>So let&#39;s have a look at what it is, how it works, and what some of the good and bad things about it are. Thanks to Steve for the help on this video.</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/_lJaVRQRsr4?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=_lJaVRQRsr4" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/bitmessage/bitmessage.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/bitmessage/bitmessage_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/bitmessage.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+                <p class="subtitle">HOW IT WORKS</p>
+
+                <p>The two important design features of Bitmessage are that it&#39;s a flooding protocol, and that it uses public key encryption.</p>
+
+                <p>Bitmessage addresses look like this, and these are a hash of the users public key.</p>
+
+                <p>Here&#39;s what happens when Alice sends a message to Bob:</p>
+
+                <p>1. Alice writes the subject and message, inputs Bob&#39;s address, and presses send</p>
+
+                <p>2. Then in the background, Alice&#39;s public key is added, and the whole thing is signed with her private key, proving it&#39;s from her.</p>
+
+                <p>3. The message is then encrypted using Bob&#39;s public key, so only Bob will be able to decrypt and read it.</p>
+
+                <p>4. A proof of work process is then initiated. This is a short, intensive computational problem that needs to be solved by your computer before sending. This step limits the amount of spam on the network.</p>
+
+                <p><p>5. The whole encrypted message is then wrapped up in a container, which includes an expiration time and proof of work, and this is then pushed into the message pools on the network.</p>
+
+                <p>6. The message pools are a collection of all the current encrypted messages on the network. Each user, or node, has a copy of each message currently in the pool, and these can be cached for weeks before they expire. This is what makes it a flooding protocol.</p>
+
+                <p>7. So Bob downloads all the current encrypted messages in the network. His client tries to decrypt every message, and is only successful when he gets to the one Alice sent, as it uses his public key.</p>
+
+                <p>8. The message from Alice is then decrypted, and Bob can read it.</p>
+
+                <p>Remember, most of this process is done automatically and in the background, so from the users perspective, the experience is fairly similar to sending an email.</p>
+
+                <p>Also, it&#39;s worth noting that if you have never messaged a particular address before, when you send the first message, it automatically sends out a special request to obtain the recipients public key. Again, this process is hidden from the user.</p>
+
+
+                <p class="subtitle">COMPARISONS</p>
+
+                <p>As you can see, compared to both ordinary, and encrypted email, Bitmessage has a few advantages.</p>
+
+                <p>Firstly, all messages on the protocol are encrypted as standard, meaning all the content of what&#39;s being said remains private between the sender and recipients.</p>
+
+                <p>The flooding protocol also means that metadata such as who&#39;s sending what to whom, the subject field, the date and time sent, and the date and time received are hidden too.</p>
+
+                <p>You could also hide the location of the sender by using Tor. The same is also true for regular email, but some email providers won&#39;t let you connect through the Tor network.</p>
+
+                <p>Bitmessage is also completely decentralized, so anyone can run the client themselves, and you don&#39;t need to trust any third parties, like email providers or server owners.</p>
+
+
+                <p class="subtitle">DOWNSIDES</p>
+
+                <p>The major trade-off with how Bitmessage protects both message content and metadata, is inefficiency. This means, compared to regular email, it can take longer to send and receive a message.</p>
+
+                <p>Since each user downloads the entire message pool in order to pick out their specific messages, scaling could become a major problem if lots more users join the network.</p>
+
+                <p>Much like holding Bitcoin on your own computer, you will also be responsible for backing up and managing the keys to access your Bitmessage account. So, if you accidentally lose them, you won&#39;t be able to send and receive messages from that address again.</p>
+
+                <p>And finally, the Bitmessage protocol has never received a formal, thorough security audit, which is a must if it ever wants to be widely used and trusted.</p>
+
+
+                <p class="subtitle">CLIENTS</p>
+
+                <p>There are two main Bitmessage apps avaiable to send and receive messages on. The first is the official client, PyBitmessage, available at bitmessage.org or the official github repo. This one works on Windows, Mac and Linux.</p>
+
+                <p>bitmessage.org<br>
+                https://github.com/Bitmessage/PyBitmessage/releases</p>
+
+                <p>There&#39;s also Bitpost. It&#39;s only available on Mac, but has the added feature of all traffic being routed through Tor, hiding the sender location. Full disclosure, I was part of the team who made this app.</p>
+
+                <p>voluntary.net/bitpost<br>
+                https://github.com/Voluntarynet/Bitpost</p>
+
+                <p>Besides sending regular mail, both these clients have another feature similar to mailing lists, allowing users to subscribe to updates from certain addresses.</p>
+
+                <p>According to the wikipedia page, there are also a few email-like services which use the Bitmessage protocol, though I haven&#39;t used them myself.</p>
+
+                <p>https://en.wikipedia.org/wiki/Bitmessage</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>So, that&#39;s the 101 on Bitmessage. One of its major strengths is being able to hide both the message data AND metadata, and of course, it is completely decentralized and trustless, which is a big plus.</p>
+
+                <p>There are obvious downsides with efficiency and scaling though, and maybe these can be fixed with some additions to the protocol.</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

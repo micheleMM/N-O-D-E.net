@@ -1,0 +1,134 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                I2P 101 - INSIDE THE INVISIBLE INTERNET<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>The Invisible Internet Project (more commonly known as I2P) is an older, traditional darknet built from the ground up with privacy and security in mind. As with all darknets, accessing an I2P site or service is not as simple as firing a request off from your web browser as you would with any site on the traditional Internet (the clearnet).</p> 
+
+                <p>I2P is only accessible if you are running software built to access it. If you try to access an I2P service without doing your homework, you won&#39;t be able to get anywhere. Instead of creating all new physical networking infrastructure, I2P builds upon the existing Internet to take care of physical connections between machines, creating what is known as an overlay network. This is similar to the concept of a virtual private network (VPN) wherein computers can communicate with one another comfortably, as though they were on a local area network, even though they may be thousands of miles apart.</p>
+
+                <img src="http://i.imgur.com/2nzxPzu.png">
+
+
+                <p class="subtitle">INTRODUCTION</p>
+
+                <p>I2P was first released in early 2003 (only a few months after the initial release of Tor), and was designed as a communication layer for existing Internet services such as HTTP, IRC, email, etc. Unlike the clearnet, I2P focuses on anonymity and peer-to-peer communications, relying on a distributed architecture model. Unlike Tor which is based around navigating the clearnet through the Tor network, I2P&#39;s goal from the start was to create a destination network and was developed as such. Here, we see that the focus is on community and anonymity within it as opposed to anonymity when using the clearnet.</p>
+
+
+                <p class="subtitle">ROUTERS, INPROXIES &amp; OUTPROXIES</p>
+
+                <p>When you connect to I2P, you are automatically set up to be a router. If you are a router, you exist as a node on the network and participate in directing or relaying the flow of data. As long as you are on the network, you are always playing a part in keeping the traffic flowing. Other users may choose to configure their nodes as inproxies. Think of an inproxy as a way to get to an I2P service from the clearnet. For example, if you wanted to visit an eepsite (An anonymous site hosted on I2P, designated by a .i2p TLD) but we&#39;re not on I2P, you could visit an inproxy through the clearnet to provide you access. Other users may choose to operate outproxies. An outproxy is essentially an exit node. If you are on I2P and want to visit a clearnet site or service, your traffic is routed through an outproxy to get out of the network.</p>
+
+
+                <p class="subtitle">ADVANTAGES</p>
+
+                <p>There are numerous advantages to using I2P over another darknet such as Tor depending upon the needs of the user. With I2P, we see a strong focus on the anonymity of connections as all I2P tunnels are unidirectional. This means that separate lines of communication are opened for sending and receiving data. Further, tunnels are short-lived, decreasing the amount of information an attacker or eavesdropper could have access to. We also see differences in routing as I2P uses packet switching as opposed to circuit switching. In packet switching routing, messages are load balanced among multiple peers to get to the destination instead of a single route typical of circuit switching. In this scenario, I2P sees all peers participating in routing. I2P also implements distributed dissemination of network information. Peer information is dynamically and automatically shared across nodes instead of living on a centralized server. Additionally, we also see low overhead for running a router because every node is a router instead of a low percentage of those who choose to set one up.</p>
+
+
+                <p class="subtitle">GARLIC ROUTING</p>
+
+                <p>I2P implements garlic routing as opposed to the more well known onion routing. Both garlic routing and onion routing rely on the technique of layered encryption. On the network, traffic flows through a series of peers on the way to its final destination. Messages are encrypted multiple times by the originator using the peers&#39; public keys. When the message is sent out on the path and decrypted by the proper corresponding peer in the sequence, only enough information to pass the message to the next node is exposed until the message reaches its destination where the original message and routing instructions are revealed. The initial encrypted message is layered and resembles an onion that has its layers peeled back on transit.</p>
+
+                <p>Garlic routing extends this concept by grouping messages together. Multiple messages referred to as “bulbs” are bound together, each with its own routing instructions. This bundle is then layered just like with onion routing and sent off to peers on the way to the destination. There is no set size for how many messages are included in one bundle, providing another level of complexity in message delivery.</p>
+
+
+                <p class="subtitle">INSIDE THE NETWORK</p>
+
+                <p>Hundreds of sites and services exist for use within the I2P network, completely operated by the community. For example, Irc2P (IRC://127.0.0.1/6668/#i2p-chat) is the premier IRC network for chat. We see search engines like Eepsites (http://eepsites.i2p) & Epsilon (http://epsilon.i2p), and torrent trackers like PaTracker (http://tracker2.postman.i2p). Social networks like Id3nt (http://id3nt.i2p) (for microblogging) and Visibility (http://visibility.i2p) (for publishing) are also abundant. If you can think of a service that can run on the network, it may already be operational.</p>
+
+
+                <p class="subtitle">FUTURE</p>
+
+                <p>I2P remains in active development with many releases per year and continues to be popular within its community. While I2P is not as popular as other darknets such as Tor, it remains to be a staple of alternative networks and is often praised for its innovative concepts.Though I2P does not focus on anonymous use of the clearnet, it is seeing active use for both peer-to-peer communication and file-sharing services.</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>While many may view I2P as just another darknet, it has many interesting features that aren&#39;t readily available or implemented on other networks. Due to the community and regular updates, there is no reason to think that I2P will be going anywhere anytime soon and will only continue to grow with more awareness and support.</p>
+
+                <p>Over time, more and more people have embraced alternative networks and we are bound to see more usage on the horizon. However one of the points I2P maintainers express is that the network&#39;s small size and limited adoption may be helpful at this point in time. I2P is not as prominent in the public&#39;s field of view, possibly protecting it from negative publicity and potential attackers.</p>
+
+                <p>Whether or not I2P will keep hold of its core community or expand and change with time is unknown, but for now it proves to be a unique darknet implementation with a lot of activity.</p>
+
+
+                <p class="subtitle">SOURCES</p>
+
+                <p>https://geti2p.net/en/comparison/tor<br>
+                https://www.ivpn.net/privacy-guides/an-introduction-to-tor-vs-i2p<br>
+                https://geti2p.net/en/about/intro<br>
+                https://geti2p.net/en/docs/how/garlic-routing</p>
+
+
+                <p>--<br>
+                BY <a href="https://twitter.com/famicoman" target="_blank">MIKE DANK</a></p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

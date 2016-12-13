@@ -1,0 +1,178 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HOW TO CREATE THE DIY $100 MINI UBUNTU LAPTOP<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This guide will show you how to create a mini ubuntu laptop from cheap and easy to find parts. Check out this video [http://n-o-d-e.net/ubuntu_laptop_overview.html] to see an overview of what this laptop can do.</p>
+
+                <p>You will need access to a Linux based system to unlock/flash the operating system on the Nexus.</p>
+
+                <img src="http://imgur.com/zg43iut.png">
+
+
+                <p class="subtitle">PARTS/MATERIALS</p>
+
+                <p>- Nexus 7 Tablet (2012)<br>
+                - Zagg Autofit 7inch Keyboard Case<br>
+                - 1x Female USB Port<br>
+                - Micro USB plug (or salvage a cable)<br>
+                - Cardboard/Thin plastic (Optional)</p>
+
+
+                <p class="subtitle">TOOLS</p>
+
+                <p>- Wire Cutters/Strippers<br>
+                - Soldering Iron<br>
+                - Glue Gun (or super glue)<br>
+                - Electrical Tape<br>
+                - Mini hacksaw blade (or rotary tool)</p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - SOFTWARE</p>
+
+                <p>(Most of this part of the article is based on a great guide by RobBomb.com. Read it here http://www.robbomb.com/2016/10/installing-linux-ubuntu-13-04-on-a-nexus-7-tablet/)</p>
+
+                <p>Step 1. First we&#39;ll need to download the Ubuntu OS files that are specifically for the Nexus 7. You&#39;ll find them on the official Ubuntu site:</p>
+
+                <p>- http://old-releases.ubuntu.com/releases/raring/ubuntu-13.04-preinstalled-desktop-armhf+nexus7.bootimg
+                - http://old-releases.ubuntu.com/releases/raring/ubuntu-13.04-preinstalled-desktop-armhf+nexus7.img.gz</p>
+
+                <p>When you&#39;ve done this, unzip the .img.gz, and you&#39;ll be left with a .raw file.</p>
+
+                <p>Step 2. Next you&#39;ll need to install FastBoot, which will allow you to unlock your Nexus 7. Open up a terminal window, and enter the following:</p>
+
+                <span class="code">sudo apt-get install ubuntu-device-flash</span>
+
+                <p>Step 3. Plug in the micro USB cable to the Nexus, and connect it to the computer you just installed Fastboot on.</p>
+
+                <p>Step 4. Now we need to get into the Nexus&#39; boot loader screen. Do this by holding down the power and volume down button. You&#39;ll see the Android character pop up, and at the bottom it should say locked.</p>
+
+                <p>Step 5. Back over on your computer, enter the following to unlock the tablet:</p>
+
+                <span class="code">sudo fastboot oem unlock</span>
+
+                <p>Step 6. If all goes well, now restart the bootloader:</p>
+
+                <span class="code">sudo fastboot reboot-bootloader</span>
+
+                <p>Step 7. We will now erase the existing Android data from the Nexus. (This removes everything already on the tablet, so be aware). First we erase the boot files.</p>
+
+                <span class="code">sudo fastboot erase boot</span>
+
+                <p>Then we erase the user data</p>
+
+                <span class="code">sudo fastboot erase userdata</span>
+
+                <p>Step 8. Then we will flash the OS files onto the Nexus. This may take a little while:</p>
+
+                <span class="code">sudo fastboot flash userdata raring-preinstalled-desktop-armhf+nexus7.raw<br>
+                sudo fastboot flash boot ubuntu-13.04-preinstalled-desktop-armhf+nexus7.bootimg</span>
+
+                <p>Step 9. Finally reboot, and Ubuntu will (hopefully) boot up and go through its setup process:</p>
+
+                <span class="code">sudo fastboot reboot</span>
+
+                <p>Step 10. Since this is an older version of Ubuntu, some of the software sources won&#39;t work right away, but we can fix this. Open up a terminal on your newly Ubuntu&#39;d Nexus, and enter the following:</p>
+
+                <span class="code">sudo nano /etc/apt/sources.list</span>
+
+                <p>Change all the &#39;ports.ubuntu.com..&#39; URLs to &#39;old-releases.ubuntu.com/ubuntu/&#39;</p>
+
+                <p>I also added the official Raspberry Pi sources since they have a lot of good ARM compatible apps. Add these two lines to the sources.list file if you want:</p>
+
+                <span class="code">deb http://archive.raspbian.org/raspbian wheezy main contrib non-free<br>
+                deb-src http://archive.raspbian.org/raspbian wheezy main contrib non-free</span>
+
+                <p>When finished press crtl+x on the keyboard, then y to confirm the changes.</p>
+
+                <p>Step 11. Last thing to do is pair the bluetooth keyboard to the computer.</p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - HARDWARE</p>
+
+                <p>Step 1. I added a bunch of black tape to the edge of the Nexus to make it blend in more with the Zagg case. This is completely optional.</p>
+
+                <p>Step 2. Place the tablet in the case, and measure the dimensions of the screen, all the way to the edges of the case. Then use that to cut out a front panel that you can attach over the screen to clean up the design.</p>
+
+                <p>I attached mine using sticky tacks and magnetic strips. You can use what you like.</p>
+
+                <p>Step 3. Take the USB port, and cut them down, so that the bottom is flush when on a flat surface.</p>
+
+                <p>Step 4. Cut the end off the micro USB plug, and strip and tin the 4 exposed wires.</p>
+
+                <p>Step 5. Now cut open the actual plug on the micro USB cable, and short the ID and Ground pins (more info here: http://makezine.com/projects/usb-otg-cable/). Then simply solder the USB port to the end of the modified micro USB cable, glue it to the back of the case, and you&#39;re finished.</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                MEMTYPE: OPEN HARDWARE PASSWORD & DATA MANAGER<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>The MemType is an interesting open hardware project which stores login credentials and other data, and can mimic a keyboard, automatically typing them out for you.</p>
+
+                <p>Thank you to Miguel and Noel for sending me a copy to make this video. Alright, let&#39;s look at it.</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/O16U_TjAutU?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=O16U_TjAutU" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/memtype/memtype.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/memtype/memtype_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/memtype.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+                <p class="subtitle">DESIGN</p>
+
+                <p>The MemType looks like an uncased USB stick, except you&#39;ll notice a button on the end of it. This is actually a mini 4 way joystick, which you use to interact with the device.</p>
+
+                <p>On the underside you&#39;ll see all the components, including an ATtiny85 processor, with 2K of storage space for your data.</p>
+
+
+                <p class="subtitle">USAGE</p>
+
+                <p>Plug the MemType into a USB port. You&#39;ll need to have the cursor active on somewhere that can take keyboard input, like an input form, or terminal screen. You&#39;ll then see the MemType text type out, and the LED will be red.</p>
+
+                <p>You then need to enter the 4 character PIN to unlock it. Press up and down on the joystick to toggle through the numbers, confirming each step by pressing the joystick to the right.</p>
+
+                <p>Once confirmed, you&#39;ll see a Welcome message, and the green LED will come on. You then simply press the up or down again to toggle through your credential, and when you want to login, press to the right. It then automatically types the username, tabs to password, inputs that, then presses enter.</p>
+
+                <p>The data that is typed out can be anything really, as long as it fills up the 2K of storage, so you could have it type out long terminal commands for example.</p>
+
+                <p>One cool thing about how this emulates a keyboard, is that it basically works on any computer, tablet or phone that you plug it into.</p>
+
+
+                <p class="subtitle">ADDING CREDENTIALS</p>
+
+                <p>MemType has its own little GUI tool you can use to add or delete credentials from the device. </p>
+
+                <p>You can also change the PIN, set the keyboard layout, and import and export an encrypted backup of your various login credentials.</p>
+
+
+                <p class="subtitle">OPEN SOURCE</p>
+
+                <p>This project is open hardware, so you can download and build your own from the various schematics that are available if you want.</p>
+
+                <p>There are two separate github repos that you can check out, covering both the hardware and software side of things. I&#39;ll include all the links in the description.</p>
+
+                <p>https://github.com/jim17/memtype<br>
+                https://github.com/oyzzo/MemTypeTool</p>
+
+                <p>There&#39;s also a hackaday page that is updated with the latest developments on the project, so check that out if you have any questions for the creators, or want to get involved.</p>
+
+                <p>https://hackaday.io/project/8342-memtype-open-source-password-keeper</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>The MemType is an interesting project, and I really like the open source nature of it. I&#39;m pretty sure there are other uses for this that I haven&#39;t thought of yet, perhaps similar to the USB Rubber Ducky, or just generally inputting certain commands, like say if you regularly need to ssh into various servers or something.</p>
+
+                <p>If I had a wish list of ways to improve this, maybe there could be extra security steps. Something like a little LCD for inputting the PIN off-screen would be handy, but obviously that would impact the cheap price.</p>
+
+                <p>https://www.tindie.com/products/area0x33/memtype-open-source-password-keeper/</p>
+
+                <p>What do you think of the MemType? Leave your comments below. Thanks for watching.</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

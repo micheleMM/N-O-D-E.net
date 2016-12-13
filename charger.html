@@ -1,0 +1,151 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HOW TO CONVERT A USB CHARGER INTO A TINY LINUX COMPUTER<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This tutorial will show you how to make a Linux computer that fits inside a modified USB charger plug, providing constant power in a very small package. It uses the Raspberry Pi compatible ODROID-W development board and runs the Raspbian OS. The plug itself can be used internationally and has US/UK/EU attachments.</p>
+
+                <p>The cool thing is that all you need to do is plug it in and that&#39;s it. You just leave it anywhere within wifi range, and it will run with constant power and is small enough to be inconspicuous. There are quite a few applications for something like this, including: personal file/media server, a silent motion alarm (when combined with the RPi Camera), a TOR relay, a pentesting tool, a Bitcoin node, personal VPN or just a general use remote linux system. This example uses a wifi adapter for connectivity, but alternatively you could use the innards of a USB ethernet adapter if you want a physical connection.</p>
+
+
+                <img src="http://i.imgur.com/NHNO1D3.png">
+
+
+                <p class="subtitle">PHOTOS</p>
+
+                <p>- <a href="http://i.imgur.com/ayoWNTx.jpg" target="_blank">Plug with UK/US/EU attachments</a><br>
+                - <a href="http://i.imgur.com/UNcxnkZ.jpg" target="_blank">USB Charger internals + ODROID-W computer</a><br>
+                - <a href="http://i.imgur.com/8wTGMEr.jpg" target="_blank">Size compared to 11inch Macbook Air</a><br>
+                - <a href="http://i.imgur.com/KJvSBqu.jpg" target="_blank">In hand</a></p>
+
+
+                <p class="subtitle">PARTS / MATERIALS (~$50)</p>
+
+                <p>- ODROID-W single board computer (700Mhz, 512MB RAM)<br>
+                - USB charger plug (Model “MD-ADP-0516UN001” which has UK/US/EU attachments)<br>
+                - USB Wifi adapter (must be Raspberry Pi compatible)<br>
+                - Insulating tape<br>
+                - Scrap plastic for insulation<br>
+                - Solder<br>
+                - Some thin wire<br>
+                - Micro-SD card (Needs to be big enough to hold the OS + whatever you intend to use the computer for)</p>
+
+
+                <p class="subtitle">TOOLS</p>
+
+                <p>- Soldering iron<br>
+                - Wire clippers/strippers<br>
+                - Small hacksaw blade<br>
+                - Fine file (optional)<br>
+                - Helping hands stand (optional)<br>
+                - Super glue</p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - SOFTWARE</p>
+
+                <p>Step 1. Download the custom Raspian OS image from the ODROID website [http://dn.odroid.com/ODROID_W/OS_IMG/]. I tried the standard Raspbian image too which seemed to work, but I&#39;m guessing the ODROID specific image is tailored more for the hardware. Follow one of the million guides on the internet for how to write the .img file to your micro SD card.</p>
+
+                <p>Step 2. Follow this guide to set up wifi on the ODROID [https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis](Note: Since there is no USB port on the board by default, you&#39;ll have to solder one on and connect your wifi adapter. This is only to set everything up, and will be removed afterwards.)</p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - HARDWARE</p>
+
+                <p>[WARNING: Disassembling USB chargers is potentially dangerous and could kill you if you mess up. Take all precautions and be careful when dealing with live electricity.]</p>
+
+                <p>Step 1. First thing we need to do is put a little jumper wire between these two components on the board [http://i.imgur.com/lNqGN5Z.jpg]. This SBC has some power stability issues that are solved with this fix. More info about this is on the ODROID forum [http://forum.odroid.com/viewtopic.php?f=104&t=6547]</p>
+
+                <p>Step 2. Remove the plastic and metal casing from around the wifi adapter. You should be left with something like this [http://i.imgur.com/RHJpSPp.jpg]</p>
+
+                <p>Step 3. Cut, strip and tin some wires and solder them to the board and the contacts on the wifi card [http://i.imgur.com/F6024gm.jpg]. Power up to see if it works.</p>
+
+                <p>Step 4. Use insulating tape and insulate. Fold it over so it fits in a nice pocket. [http://i.imgur.com/kq2Y5ho.jpg]</p>
+
+                <p>Step 5. Now we need to take apart the USB charger. Use a small hacksaw blade to cut around all four edges and pry it in half. Going slow here helps not to accidentally saw into the components inside, which would be BAD. You will be left with something like this [http://i.imgur.com/uS9OAD2.jpg]</p>
+
+                <p>Step 6. Instead of messing with the components on the board, I decided to cut away the front of the USB port, revealing the contacts. [http://i.imgur.com/trWgMEf.jpg]</p>
+
+                <p>Step 7. Cut, strip and tin a red and black wire and solder them to the USB charger. The other half can be soldered directly onto the ODROIDs battery connector. This helps save space instead of using the Micro USB port. [http://i.imgur.com/9ys7PH4.jpg]</p>
+
+                <p>Step 8. Cut some scrap plastic and screw it to the exposed USB charger. This will insulate the electricity from the charger. I used 2mm thick plastic which seems to do the trick [http://i.imgur.com/I9a9tJj.jpg]</p>
+
+                <p>Step 9. Stack everything up [http://i.imgur.com/HKXolJs.jpg] so it&#39;ll fit inside the case. You&#39;ll noticed that there is a gap between the two halves of the case [http://i.imgur.com/oWrQ9D9.jpg], so we&#39;ll need to cover that.</p>
+
+                <p>Step 10. I used thin plastic the cover the exterior, and then thicker plastic to provide support. [http://i.imgur.com/PprH1la.jpg]. It ended up being pretty robust.</p>
+
+                <p>Step 11. Finish the exterior with vinyl sheeting or however you like to make it less conspicuous. You now have a little Linux plug computer! [http://i.imgur.com/9omrjCX.jpg]</p>
+
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

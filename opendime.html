@@ -1,0 +1,140 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                OPENDIME: REAL LIFE CYBERPUNK CRED STICKS<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>If there&#39;s ever any doubt that we&#39;re currently living in a cyberpunk world, then the OpenDime (http://OpenDime.com) sticks should help put that to rest. </p>
+
+                <p>These little circuit boards can be filled up with bitcoins, and are supposed be used like disposable cred sticks from science fiction. That means you can use digital currency off-chain, and in person, like regular coins and notes. </p>
+
+                <p>Couple that with some clever PCB design, which I&#39;ll get to later in the video, and you can begin to see how cool this is.</p>
+
+                <p>Thanks to CoinKite for sending the samples so I could test them out.</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/ypQHc3EQVfE?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=ypQHc3EQVfE" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/opendime/opendime.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/opendime/opendime_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/opendime.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+                <p class="subtitle">DESIGN</p>
+
+                <p>The OpenDime looks like the innards of a USB flash drive, and that&#39;s basically what it is. The difference here is that no data other than the bitcoin private key and public address can be stored on it.</p>
+
+                <p>These little sticks are very light, and seem fairly resilient, though I&#39;m not sure how they&#39;d fair in a pocket with other stuff. There&#39;s a protective cover over the electronic components, and that&#39;s about it.</p>
+
+
+                <p class="subtitle">SETUP</p>
+
+                <p>Step 1. Plug the OpenDime into a USB port. This will also work with an OTG adapter for phones and tablets. You&#39;ll notice the green light will be on, and the red light will flash intermittently.</p>
+
+                <p>Step 2. We&#39;re now going to generate the private key and bitcoin address.</p>
+
+                <p>Do this by dragging any files into the OpenDime drive on your computer. It doesn&#39;t matter what it is, as long as it fills up 256k byte of data. This will give it enough entropy to create a random key. None of the files are stored on the Dime.</p>
+
+                <p>Note that the entire key generation step is done inside the Dime&#39;s own processor, and this information never touches an outside computer.</p>
+
+                <p>Step 3. Once complete the OpenDime automatically ejects itself, then remounts. You will see now that the green light blinks, and the red light is off.</p>
+
+                <p>Step 4. The OpenDime has now created it&#39;s own private key, and public bitcoin address. Open the index.htm file on the drive and you will now see your address and corresponding QR code.</p>
+
+                <p>You can use a bitcoin wallet or service to send money to this address, and fill up your OpenDime. You&#39;re now ready to use it in person.</p>
+
+
+                <p class="subtitle">USING</p>
+
+                <p>The idea is to have a few of these, and use them in person like coins or notes. </p>
+
+                <p>Users can verify the contents by plugging the sticks into their computer or phone and checking the balance on a blockchain explorer.</p>
+
+                <p>You can also check that the dime holds a specific private key by verifying the signed message that&#39;s been generated on the stick.</p>
+
+                <p>This way of swapping these digital coins in person means there is no record of the transactions on the bitcoin blockchain, so if the stick changes hands many times, those transactions will be anonymous. The downside is that just like regular money, if you lose these, you will lose your bitcoins.</p>
+
+                <p>The phrase OpenDime uses is piggy-bank economics, and that&#39;s a great analogy. When the user wants to remove, or spend the funds from the stick, they need to physically break part of the board, known as the seal. This creates a permanent physical change in the flash memory of the processor, and releases the private key, which the user can then retrieve by plugging it into a computer. They can then import this private key into any bitcoin wallet and spend the funds.</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>This is a very early adopter product for sure, and hardly anyone uses technology like this at the moment, but I think the OpenDime could be the start of something, especially when digital currencies take off in a big way. They provide a novel way to perform in-person transactions without leaving a record on a blockchain, adding a great level of privacy. There are some current limitations, but this is only version one. I&#39;m definitely look forward to seeing what&#39;s next.</p>
+
+                <p>What do you think about the OpenDime? Leave your comments below. Thanks for watching.</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

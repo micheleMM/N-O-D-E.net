@@ -1,0 +1,158 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                BUILDING A DIY EMDRIVE PART 2: GOING INTO SPACE<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>I last spoke to Paul Koclya almost 18 months ago (http://n-o-d-e.net/emdrive.html), when he was first embarking on his potentially ground-breaking DIY EMdrive project. </p>
+
+                <p>He&#39;s now back for round 2, where we caught up on the state of the project, past experiments and the results, and his future ambitions for taking the drive into space later in the year.</p>
+
+                <img src="http://imgur.com/9e9BQ9g.png">
+
+
+                <p class="subtitle">THE INTERVIEW</p>
+
+                <p>[N-] Last time we spoke you were planning on building both a 2.45 GHz and 24 GHz thruster. Are they now complete?</p>
+
+                <p>[PK] I dropped the 2.45GHz build and focused on the small 24GHz version, which is now completed in the 4th revision. It is a fully integrated device which we intend to send into space next year.</p>
+
+                <p>[N-] Very cool! What kind of testing did you carry out, and what were the results?</p>
+
+                <p>[PK] For testing, I set up a platform which is floating on water. Its rotation is tracked optically. The platform is enclosed to lower the environmental influence on the system.</p>
+
+                <p>I performed many tests and provided the results for download (including a software viewer) on the &quot;Hackaday.io&quot; website (https://hackaday.io/project/10166-flying-an-emdrive). The platform is very sensitive to noise, so many measurements were too noisy to see anything. However, under very good conditions (no wind, no rain, night time) I measured tiny amounts of change in rotation which reversed by turning the EMDrive by 180°.</p>
+
+                <p>Recently, I contacted Professor Martin Tajmar who is a leading expert on micropropulsion technology in Germany and who has already built and tested a 2.4GHz EMDrive in the lab. He agreed to put the EMDriveV4 to the test on an extremely sensitive test rig.</p>
+
+                <p>[N-] Has anyone else tried to create their own drives based off your documentation?</p>
+
+                <p>[PK] I didn´t hear of anyone putting their hands on the 24GHz approach. The reason is imho the high BOM cost compared to a 2.4GHz build. But the number of 2.4GHz builds increased a lot over time. They all show positive results, but most people don´t have the conditions to test them properly - including me. Properly means to exclude any parasitic forces which may look like real thrust.</p>
+
+                <p>[N-] Have you seen attitudes change about the EMdrive since we last spoke? Is it still a contentious subject?</p>
+
+                <p>[PK] The attitudes might have changed recently, because Roger Shawyer´s papers have passed the peer review last month. This is sparking new excitement about the EMDrive.</p>
+
+                <p>[N-] Can you briefly outline what Roger Shawyer&#39;s paper concluded?</p>
+
+                <p>[PK] I didn´t read it in detail, but here is a quote: “It is concluded that the test data presented verifies the theory of operation of the microwave thruster and thus, for the first time, a method of propulsion that does not rely on propellant has been demonstrated.” The PDFs are available are on the SPR Ltd. (http://emdrive.com)</p>
+
+                <p>[N-] Exciting developments. You mentioned you want to test the drive in space. What kind of hurdles are there to getting this into orbit, and what will you be testing for exactly?</p>
+
+                <p>[PK] The technical hurdle is to build a small satellite with all systems needed to support the EMDrive in space. This means we need at least an electric power system as well as communication and attitude control.</p>
+
+                <p>We chose the PocketQub standard, because it´s the only standard which can be sent up for less than €25k and still can contain the EMDrive.</p>
+
+                <p>We plan to test for orbital changes which will occur when the EMDrive is pushing towards the orbital flight path.</p>
+
+                <p>In detail: The satellite will be tumbling after deployment. We will stop the tumbling with hysteresis material and align the sat to the Earth´s magnetic field with small permanent magnets (like a compass needle). This will ensure a predictable orientation of the sat which will change around 180° during every orbit (assuming a sun synchronous orbit). The EMDrive is aligned in-line with the orbital path, showing either prograde or retrograde - depending on the alignment to the Earth´s magnetic field.</p>
+
+                <p>Over time, the force of the EMDrive can accumulate which is basically why it is important to perform this experiment in orbit: Small forces can be made visible over a longer period of time. In this case, the orbital shape should become more elliptical. It should lower the height on one side and rise the height on the other side. This could be several kilometres in a few months.</p>
+
+                <p>[N-] I&#39;ve read that there&#39;s a rival project also aiming to get their drive in space too. How do your projects compare/differ?</p>
+
+                <p>[PK] Yes, there were many posts on the internet talking about a 6U-Cubesat which is planned to be developed by Guido Fetta, one of the inventors of the original EM-drives.</p>
+
+                <p>A 6U-Cubesat launch will definitely cost more than a half million USD - and this doesn´t include the EMDrive. I don´t know how much money they have and if they already have a flight model. I just can say that in a few weeks we will have a flight model ready for flight qualification testing. Should we get funding soon, we could catch a slot on the Unisat-7 mission which flies in 2017. We hope to get positive results for thrust in the tests with Professor Tajmar - maybe this will help to get a funding.</p>
+
+                <p>Another way to help is to donate for our launch - with 25000€ we are go for launch.</p>
+
+                <p>gofundme.com/25tmmes</p>
+
+                <p>Technically, our projects don´t differ that much. Their mission plan sounds almost exactly like ours - basically it´s looking at orbital changes. I assume that the 6U cubesat will fly an EMDrive with 3-5 GHz which defines the size of their satellite.</p>
+
+                <p>Their advantage is the much larger area of solar panels compared to ours. We cannot drive our EMDrive directly. We must first charge the battery and then run the EMDrive for a while - that´s a pulsed operation. So for an hour of EMDrive operation, we need to wait several hours for charging.</p>
+
+                <p>But on the other hand, our mission will cost 30-50 times less - so it´s something we can live with :)</p>
+
+                <p>It will be assembled this month, then we need to make a documentation video, but it should all happen this year.</p>
+
+                <p>[N-] Besides the crowdfunding, are you looking for any other specific help?</p>
+
+                <p>[PK] Collecting the data transmitted by our satellite would be very helpful. We want to invite everyone to participate. All is needed is a RTL-USB stick, an antenna for the 70cm band and a free software like SDR-SHARP.</p>
+
+                <p>We will be sending in a radio mode which allows the telemtry to be visible as plain text in the radio spectrum.</p>
+
+                <p>You can build an eggbeater-antenna for a few bucks developed by ZR6AIC. Here´s the link http://zr6aic.blogspot.de/2013/03/building-my-eggbeater-ii-omni-leo.html</p>
+
+                <p>[N-] Remind people how they can keep up with the project.</p>
+
+                <p>[PK] I just created a group on facebook (https://www.facebook.com/groups/566697470200611). This will be the official pre-launch and mission page. We will start updating as soon as the flight model is ready.</p>
+
+                <p>[N-] Well thanks for taking the time Paul, good luck with the project! I&#39;m genuinely interested to see how this turns out.</p>
+
+                <p>Just a reminder to everyone, you should definitely check out the GoFundMe page (gofundme.com/25tmmes/) if you want to help out a potentially world-changing DIY project.</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

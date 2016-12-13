@@ -1,0 +1,156 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                PRIVATE COMMUNICATION ON THE CLEARNET<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>Even when we think we&#39;re communicating in private, whether by email, text messages, private messages on social media etc, the fact is that a bunch of 3rd parties, like tech companies, governments, ISPs and advertisers, all see that data too. And it&#39;s not just that they can see it, they&#39;re actively collecting and analyzing all of it.</p>
+
+                <p>One of the downsides of encrypting messages and emails to combat this, is that since so few people are doing that, you will stick out like a sore thumb to anyone who is monitoring the data, and probably will receive closer scrutiny. For example, it&#39;d be pretty easy to filter out all messages that contain PGP headers.</p>
+
+                <p>What if we could still encrypt the data, but make it look like ordinary plain text, made up of dictionary words? If it was done in a dynamic way, so it was different for every person, it would be hard to detect using passive data mining techniques. That would allow us to use existing services like gmail, twitter, facebook, reddit etc on the clearnet, while still protecting our message content.</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/5_YBp36mf_g?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=5_YBp36mf_g" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/clearnet/clearnet.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/clearnet/clearnet_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/clearnet.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+
+                <p class="subtitle">ASEMICA</p>
+
+                <p>I found an awesome little command line script called Asemica on Github, and it does just that.</p>
+
+                <p>https://github.com/linenoise/asemica</p>
+
+                <p>It takes a message like this:</p>
+
+                <span class="code">&quot;Yeah, sure my phone number is 1234567890. Be there at 3pm&quot;</span>
+
+                <p>And transforms it into something like this, and it does it using the Markov chain mathematical theory:</p>
+
+                <span class="code">&quot;attribute CLSID BF ZA Z Where actual Q _ SQRT Square root Object Adding a ‘hot&#39; color 'car&#39; object Accommodating older non VBScript aware too concerned with Ajax can accept able More HTML CSS Event BODY Expected Because I &#39; Array 'chris example Assuming your Java Classes also Firefox JavaScript Also Assignment Dragonfly Opera ChromeT The AIFF format Moreover onunl oad Note Before Boolean Browser Because JSON Native document &#39; 'change&#39; goThere ocati on Al Di el ect 'change&#39; getPrice build all BC Application Any Node CDATA begins dialing operation Event Boolean Displays as Allman in April IN B Chrome About Microsoft&#39;s flavor of America EST tempus sagittis Nulla Praesent luptatum delenit ai nOutput size &#39; A Accessing Java ARchive Top For A Back None Centers the AIFF format BC ActiveX BC Absol utePosit ion db BC ActiveX filter Functions A 'hot&#39; color All CSS CSS Event BUTTON Although HTML Check both IE &#39; 'change&#39; verifySong addEvent addEventLi stenerC A A 'car&#39; object Another After MSIE as C C &#39; Array As Allman &quot;</span>
+
+                <p>The script requires three main things to run. First it needs a source message that you wish to obfuscate. The second is a corpus source, which is a large piece of text like a book, and this acts as the basis for what words are used, and how they&#39;re arranged. This can be local, or called from an external server. Finally there&#39;s the output file for the ciphertext.</p>
+
+                <span class="code">./asemic enc -i message.txt -c corpus.txt -o cipher.txt</span>
+
+                <p>You can even go a step further by piping the source message through openssl to encrypt it, meaning anyone wanting to decrypt would need the correct password.</p>
+
+                <p>And that&#39;s not all. You go further still, by adding PGP encryption into the mix too, meaning the message can only be read by a specific recipient.</p>
+
+
+                <p class="subtitle">USE CASES</p>
+
+                <p>The output from this script is a little too long for some social networking sites like Twitter, but you could include pastebin or twitlonger type links when you&#39;re communicating, so outsiders would have no idea what&#39;s happening.</p>
+
+                <p>I think it would also work well for private messaging on reddit etc, perhaps even in the comments on subreddits where the mods know what&#39;s going on.</p>
+
+                <p>The script also has an option to format the output like an email. When you combine that with the extra PGP encrypted message step, it gives you an option to send secure private messages on any email service.</p>
+
+
+                <p class="subtitle">KEYBASE</p>
+
+                <p>The thing that ties this all together is Keybase, allowing you to look up people, and find their verified email address, public key, and social media accounts.</p>
+
+                <p>The public profiles also contain two extra fields - an about you section, and one for you location. These could be used to store a link to your current corpus source, perhaps a large text file from archive.org or even a long html page, and the other could store your current decryption password for public posts. </p>
+
+                <p>You could change these as often as you like, meaning unless someone was actively tracking your profile and messages, then your message history would remain private.</p>
+
+                <p>Decentralized protocols like Identifi could eventually fill this role too in the future, so you wouldn&#39;t have to rely on a centralized website.</p>
+
+                <p>https://github.com/identifi/identifi</p>
+
+                <p>And there&#39;s always the option to use no external service, if you and the recipients have pre-arranged your corpus source and keys. This would be the most secure, and untraceable.</p>
+
+
+                <p class="subtitle">USER EXPERIENCE</p>
+
+                <p>This process is a little complicated and involved, but what if it could be streamlined? A browser extension could perform these tasks at the click of a button, although the browser might not be the most secure method. </p>
+
+                <p>Another option would be a background process that runs on your system, which can encrypt and decrypt any selected text, with certain key combinations.</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>I think this kind of thing is a stopgap solution. Ideally, all these services would be decentralized and encrypted as standard, but that&#39;s not the world we currently live in.</p>
+
+                <p>This method does, however, give you a way to keep using the vast infrastructure of existing services, without the massive downside of your data being automatically mined and spied on. What do you think?</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HOW TO POWER A RASPBERRY PI ZERO OVER ETHERNET<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This guide will show you how to power a Raspberry Pi Zero over an ethernet cable. Since ethernet plugs only use half their pins, we can use the other half for simultaneous power.</p>
+
+                <p>It&#39;s meant to be used with power over ethernet compatible networking hardware, so you can power it directly through the ethernet cables, without any batteries or USB chargers. You just plug it in, and you have both power and internet connectivity through a single cable.</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/2RpNAul9S0E?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=2RpNAul9S0E" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/ethernet_201612/ethernet.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/ethernet_201612/ethernet_201612_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/ethernet.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+
+                <p class="subtitle">PARTS</p>
+
+                <p>- Raspberry Pi Zero<br>
+                - USB Ethernet adapter (make sure it is compatible with your Raspberry Pi)<br>
+                - 12v-5v step down convertor (the input voltage depends on your networking hardware, but it should output 5v)<br>
+                - 2x micro USB plugs<br>
+                - Thin wires</p>
+
+
+                <p class="subtitle">TOOLS</p>
+
+                <p>- Soldering Iron<br>
+                - Clippers<br>
+                - Wire strippers<br>
+                - Needle nose plyers</p>
+
+
+                <p class="subtitle">HOW-TO GUIDE</p>
+
+                <p>Step 1. Remove the casing from the USB ethernet adaptor</p>
+
+                <p>Step 2. Desolder the USB cable from the adaptor</p>
+
+                <p>Step 3. We need to make sure pins 4,5,7 and 8 on the ethernet socket are removed from the adaptor, so we can free them up for power. I tried removing the socket itself, but had no luck, so I ended up snipping the pins at the back and bending them out the way.</p>
+
+                <p>Step 4. We now need to create the Micro USB plugs for both the power, and the USB connection to the ethernet adaptor. To get them to work on the Pi, we need to short the ID and Ground pins like shown.</p>
+
+                <p>Step 5. Desolder the USB socket from the step down convertor.</p>
+
+                <p>Step 6. Now solder everything together and complete the circuit.</p>
+
+                <p>Step 7. Add some electrical tape to the parts so they don&#39;t short on each other and put them inside a case. I made a simple one out of cardboard.</p>
+
+                <p>Finished. Now plug your Pi Zero into a compatible ethernet port  and watch it switch on! You can now log into the Pi remotely and use it as a headless computer.</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

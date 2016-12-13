@@ -1,0 +1,264 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                BEGINNERS GUIDE TO THE COMMAND LINE (DEBIAN/UBUNTU/RASPBIAN)<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This guide will teach you the basics of the command line. It&#39;s aimed at beginners, and covers enough to get you up and running.</p>
+
+                <p>It&#39;s specifically for Debian based distros, like Ubuntu, Elementary, Raspbian etc. Most of the commands will work on other, non-debian systems, but some will be a bit different, so do your research.</p>
+
+                <p>If you want to test out the commands without worrying about messing your system up, the easiest way is to grab a Raspberry Pi and load up Raspbian.</p>
+
+                <p>(Watch the video for all the commands)</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/4d77bxpgB5c?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=4d77bxpgB5c" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/command_line/command_line.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/command_line/command_line_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/command_line.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+
+                <p class="subtitle">FILE SYSTEM & STRUCTURE</p>
+
+                <p>Paths tell the terminal where to look for specific files and directories, so it&#39;s important to learn about how your system structures it&#39;s files so they can be found easily. Note that in this video, the words folder and directory are interchangeable.</p>
+
+                <p>For Linux and other unix-like systems such as Mac OS X, the base directory which everything else is contained in is called root. It is represented by the first / in a path. In the example shown, the different sections of the path each represent a directory or file. You basically add more to the right side of the text path the deeper you want to go into nested directories.</p>
+
+                <p>If you&#39;re having trouble with this, you can easily drag a file or folder into your terminal app to get the correct path.</p>
+
+
+                <p class="subtitle">MANUAL PAGES</p>
+
+                <p>Manual pages contain all important information for the different command line programs on your system. They contain information about the programs, the various options, examples of how to use them and more. To access them, simply type “man” followed by a space, then the apps name.</p>
+
+                <p>This will be your first port of call if you want to troubleshoot or try some new options.</p>
+
+                <p>To exit, just press q.</p>
+
+
+                <p class="subtitle">SUPER USER</p>
+
+                <p>As a security precaution, normal users don&#39;t have permission to do some things on the system, since you could accidentally render your computer unusuable.</p>
+
+                <p>That&#39;s where the super user comes in. You may see the word sudo typed before other commands, and this basically gives you permission to do admin level tasks on your system. Depending on how your system is set up, you will be asked for the admin password.</p>
+
+                <p>There is also the root user, but that&#39;s a little outside the scope of this video.</p>
+
+
+                <p class="subtitle">VIEW CURRENT DIRECTORY</p>
+
+                <p>To know where you currently are in the system, use the pwd command then press enter. It&#39;ll show a path to the current directory you&#39;re in.</p>
+
+
+                <p class="subtitle">CHANGING DIRECTORY</p>
+
+                <p>Use the cd command to change directories. Type cd, a space, then the path to where you want to go, then press enter.</p>
+
+                <p>You can use the tilde (~) symbol as a shortcut for your home folder to save you time typing.</p>
+
+                <p>Another tip to change to a level above where you are is to use two periods.</p>
+
+
+                <p class="subtitle">MOVING FILES</p>
+
+                <p>You can move files using the mv command. Type in mv, the path to the file you want to move, then the path where you want to move it.</p>
+
+                <p>This can also be used for renaming files, you just simply change the input and output file names, and it will automatically rename it at the same time.</p>
+
+
+                <p class="subtitle">FINDING FILES</p>
+
+                <p>One of the simplest ways to find files is to use the aptly named find command.</p>
+
+                <p>If you know the filename, but not where it is, type the following, replacing what&#39;s between the quotes with the file name:</p>
+
+                <span class="code">find -iname &quot;file.txt&quot;</span>
+
+                <p>This will search the current directory and any nested directories inside it, and spit out a path if a match is found.</p>
+
+                <p>If you want to find specific file types, you can use the wildcard symbol. For example if you want to find txt files:</p>
+
+                <span class="code">find -iname &quot;*.txt&quot;</span><br>
+
+
+                <p class="subtitle">MAKING NEW DIRECTORIES</p>
+
+                <p>The mkdir command, as you probably guessed, makes directories. To make a new directory wherever you currently are in the system, type mkdir, then the name of the directory. Make sure there are no spaces, and remember it is case sensitive.</p>
+
+                <p>You can also create new directories in other places on your system, by including the full path before your new directory name, as shown in the example.</p>
+
+
+                <p class="subtitle">DELETING FILES/DIRECTORIES</p>
+
+                <p>To remove files, you can use the rm command. Type rm, followed by the file, or the full path to the file you want to delete.</p>
+
+                <p>If you want to delete a directory full of files, you can add the -rf options.</p>
+
+                <p>Also check out the shred command if you want to securely delete files too.</p>
+
+
+                <p class="subtitle">COPYING FILES</p>
+
+                <p>To copy files, use the cp command. Similar to the move command, you simply type cp, the path to the file you want to copy, then the path where you want to copy it to. </p>
+
+
+                <p class="subtitle">LISTING FILES/DIRECTORIES</p>
+
+                <p>Use the ls command, to list everything inside the present directory you&#39;re inside. Perfect for quickly showing what&#39;s there.</p>
+
+                <p>I also like to use the -1al options to list files in order, showing hidden files, as well as other size and ownership info.</p>
+
+
+                <p class="subtitle">FIND PROGRAMS</p>
+
+                <p>You can use the apropos command to find specific programs using a keyword. For example you may have installed a calculator app, but forgot the exact name of it. Just type apropos, a space, then the keyword, in this instance, calculator.</p>
+
+                <p>Press enter and you&#39;ll see the corresponding programs you have that fit the keyword.</p>
+
+
+                <p class="subtitle">INSTALLING NEW PROGRAMS</p>
+
+                <p>For those used to Windows or Mac, installing apps by command line might be a bit strange at first, but it&#39;s not so bad.</p>
+
+                <p>Use the sudo apt-get install command followed by the name of the program you want to install.</p>
+
+                <p>If it&#39;s in the repositories, it will be downloaded and installed.</p>
+
+                <span class="code">sudo apt-get install programname</span>
+
+                <p>You can also install programs manually, but that is outside the scope of this video.</p>
+
+
+                <p class="subtitle">REMOVING PROGRAMS</p>
+
+                <p>To remove programs, use the same command for installing programs, but instead of the install option, use remove.</p>
+
+                <span class="code">sudo apt-get remove programname</span><br>
+
+
+                <p class="subtitle">VIEW INSTALLED PROGRAMS</p>
+
+                <p>To view all the packages that are currently installed on your system, use the dpkg utility with the -l option. This will list everything you have installed.</p>
+
+                <span class="code">dpkg -l</span><br>
+
+
+                <p class="subtitle">SEARCHING REPOSITORIES</p>
+
+                <p>If you&#39;re looking for an app, but don&#39;t know it&#39;s specific name, you can use this command. Replace the last word with a keyword of your choice, and all the repositories set up on your system will be searched. It&#39;s really helpful when you&#39;re looking for new apps to install.</p>
+
+                <span class="code">sudo apt-cache search keyword</span><br>
+
+
+                <p class="subtitle">VIEWING CURRENT PROCESSES</p>
+
+                <p>To view all the processes currently running on your system, use the ps command. I like to use the -acx options.</p>
+
+                <p>This will tell you information such as the process name and number, which user initiated it, and how long it&#39;s been running.</p>
+
+
+                <p class="subtitle">KILLING PROCESSES</p>
+
+                <p>To kill a process, you&#39;ll need the process ID from the previous section for whatever app or process you want to stop. Once you have it, type kill, a space, then the process number. This will automatically kill the process, which is pretty handy if it&#39;s freezing or acting strangely.</p>
+
+
+                <p class="subtitle">KILLING COMMANDS</p>
+
+                <p>If you have a command line program running in the terminal and it&#39;s not responding, you can kill it by press ctrl + c</p>
+
+
+                <p class="subtitle">CLEARING THE SCREEN</p>
+
+                <p>If you find the screen is getting too cluttered, you can clean it up using the clear command. Alternatively, you could press ctrl + l</p>
+
+
+                <p class="subtitle">EXITING</p>
+
+                <p>When you&#39;ve finished your terminal session, it&#39;s best to exit properly. Simply type exit and press enter.</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>It might be a little intimidating when you&#39;re first starting out, but getting familiar with the command line can really open up so many possibilities. This is just the tip of the iceberg, and there are literally millions of command line apps out there. You can start to run custom scripts, automate things, basically do anything. It&#39;s like unlocking a whole other side to your computer.</p>
+
+                <p>Anyways, I hope you found this useful</p>
+
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

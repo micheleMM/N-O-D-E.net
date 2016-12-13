@@ -1,0 +1,141 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HOW TO CREATE A PI ZERO PACKET CAPTURING COMPUTER<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This guide will show you how to create a small, packet capturing computer using a Raspberry Pi Zero combined with a passive lan tap. It&#39;s meant to be used with power over ethernet compatible networking hardware, so you can power it directly through the ethernet cables, without any batteries or USB chargers.</p>
+
+                <p>You simply plug it in between two ethernet cables, and it automatically powers on and begins logging the traffic that passes through.</p>
+
+                <p>Thanks to Liz Kellog for the idea.</p>
+
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/qwDfTnTnai8?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+                </div>
+                <p class="description">
+                - <a href="https://www.youtube.com/watch?v=qwDfTnTnai8" target="_blank">Youtube link</a><br>
+                - <a href="https://archive.org/download/packet/packet.mp4" target="_blank">Archive.org mirror</a><br>
+                - <a href="https://archive.org/download/packet/packet_archive.torrent" target="_blank">Torrent</a><br>
+                - <a href="https://keybase.pub/nodefiles/packet.mp4" target="_blank">Keybase mirror</a>
+                </p>
+
+
+                <p class="subtitle">IMAGES</p>
+
+                <p>- <a href="https://i.imgur.com/gtX77pX.png" target="_blank">Circuit</a></p>
+
+
+                <p class="subtitle">PARTS</p>
+
+                <p>- Raspberry Pi Zero<br>
+                - 12-5v step down convertor (the input voltage will depend on the network hardware it will be plugged into)<br>
+                - A Pi compatible USB Ethernet adaptor<br>
+                - 2x ethernet sockets<br>
+                - 2x micro USB plugs<br>
+                - Thin wires</p>
+
+
+                <p class="subtitle">TOOLS</p>
+
+                <p>- Soldering iron<br>
+                - Desolder pump / Solder wick<br>
+                - Wire Strippers</p>
+
+
+                <p class="subtitle">SOFTWARE SETUP</p>
+
+                <p>I tested the device using tshark, which is wiresharks command line utility. The cool thing about it is that it automatically begins logging ethernet data when it starts up. All you need to do is have the Pi auto login on boot, then set a script to run tshark. </p>
+
+
+                <p class="subtitle">HOW-TO GUIDE</p>
+
+                <p>Step 1. Remove the USB ethernet adaptor from its casing, then also remove the RJ45 socket from the board.</p>
+
+                <p>Step 2. Use the desolder pump and remove the USB plug from the ethernet board.</p>
+
+                <p>Step 3. Cut and tin the different wires you&#39;ll need for the circuit.</p>
+
+                <p>Step 4. Wire up the micro USB plugs for the ethernet adaptor and power. We&#39;ll need to short the ID and Ground pins. You can use usbpinout.net for the pinout reference.</p>
+
+                <p>Step 5. Follow the circuit diagram and wire everything up.</p>
+
+                <p>Step 6. Put everything inside a case. I modified an old piece of packaging that fit everything quite well. The lid opens up nicely and shuts with magnets.</p>
+
+                <p>Step 7. Plug it in, and it should automatically turn on and start capturing the packets passing through. Remember that you need to plug the correct end into the networking hardware to get the power over ethernet working.</p>
+
+                <p>It seems to work, and I&#39;m pretty pleased with it. What do you think? How could it be improved? What projects would you like to see next?</p>
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

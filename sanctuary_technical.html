@@ -1,0 +1,117 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                SANCTUARY UPDATE: TECHNICAL OUTLINE FOR DECENTRALIZED VIRTUAL REALITY<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>NODE asked me for some feedback on his Sanctuary decentralized VR design concept so I put together a rough outline/spec of one way to implement a decentralized VR world</p>
+
+                <img src"http://i.imgur.com/rSxAqG8.png">
+
+
+                <p class="subtitle">CONSISTENCY (WORLD IS A GRID OF NAMECOIN ENTRIES STORING MODELS)</p>
+
+                <p>Imagine the VR world is on a grid and we give each block of the grid a name composed of a prefix for the world&#39;s name and that grid point&#39;s x and y coordinates e.g. name=&quot;sanctuary&quot;, x=1, y = 2 -> &quot;sanctuary 1,2&quot;. When your client appears on the grid, it looks up nearby grid locations on namecoin and fetches the values for them. These containthe models(which could be values or torrent refs, etc) or belonging in those locations along with their position, orientation and scale data. The model data could also contain sets of small named JS programs for interaction — including a timer() for animation/simulation.</p>
+
+                <p>If a namecoin address is taken but its value isn&#39;t valid, clients could ask grid neighboring points to vote (via an entry in their grid value) on a valid entry to use for the corrupt location.</p>
+
+
+                <p class="subtitle">RESOURCE MANAGEMENT (NAMECOIN LAND MARKET AND CONSTRAINTS)</p>
+
+                <p>Users can purchase and exchange land using existing namecoin markets. The client would ideally integrate a namecoin wallet so the UI can make this easy. We can also restrict the volume, complexity, and client cpu resources of the models in a given grid area to be proportional to the namecoin unspent outputs associated with the address.</p>
+
+
+                <p class="subtitle">LATENCY (CLIENTS SHARE AVATAR UPDATES OFF BLOCKCHAIN)</p>
+
+                <p>The large structures in the world can be stored in the namecoin grid entries as they don&#39;t change frequently. You can imagine the structures in a grid location fading in as their confirmations in namecoin increase and their last version fading out like rezing and derezing in TRON.</p>
+
+                <p>But for smaller objects like avatars, we need fast updates so we have clients interconnect and share location updates (similar to how bitcoin nodes share transactions or bitmessage nodes share messages) with a policy of only keeping the latest update and removing them after a few minutes. If a grid entry references an authoritative node to talk directly to for fast updates from around it&#39;s region, the client can connect to it for very low latency updates of avatars in that region.</p>
+
+                <p>An avatar update would consist of a structure containing:</p>
+
+                <p>1. the coordinates, orientation, and other parameters<br>
+                2. reference to a namecoin entry for the username, the value at this address would contain the user&#39;s avatar info and, to avoid spam, would have to have sufficient namecoin deposit (a proof-of-stake) or a recently done hashcash style proof-of-work.<br>
+                3. a signed hash of the above data that verifies the owner of the identity published this update</p>
+
+
+                <p class="subtitle">IMPLEMENTATION (BROWSER WEBGL UI + LOCAL NODE.JS NODE)</p>
+
+                <p>I&#39;d suggest writing a small node in a scripting language like node.js that would connect to other nodes to share updates and implement a minimal web server that would</p>
+
+                <p>1. return a single page webgl app for the VR world when requested by a local browser<br>
+                2. handle socks connection namecoin requests from the app<br>
+                3. handle a socks connection to receive and post avator updates<br>
+                4. namecoin wallet and persistent cache if needed</p>
+
+                <p>--<br>
+                BY <a href="http://twitter.com/stevedekorte" target="_blank">STEVE DEKORTE</a></p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                THE SIA INTERVIEW: YOUR PRIVATE P2P DATACENTER<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>Sia [http://siacoin.com] is one of those projects that few people know about. It&#39;s like a decentralized version of Dropbox or Google Drive, but with alot more potential too. Say if you have spare drive space you are not using, you can sell it to someone who wants to store their files. All the files are automatically encrypted and distributed through the network for privacy, and the cool thing about the project is that it&#39;s available to use today! I spoke with one of the projects cofounders Luke Champine to find out more.</p>
+
+                <img src="http://i.imgur.com/wnQC6k5.png">
+
+
+                <p class="subtitle">THE INTERVIEW</p>
+
+                <p>[N-] What was the impetus for starting Sia? Is there a meaning behind the name Sia?</p>
+
+                <p>[LC] My cofounder, David, dreamed it up two years ago. Like a lot of people in the crypto space, he was both terribly excited by Bitcoin, and certain that it could be improved upon. He observed that bitcoins do not have any inherent value, and as a result the exchange rate has fluctuated wildly. A cryptocurrency backed by a physical resources, like storage, would never be worth less than the storage it could buy. He began drafting a technical whitepaper describing a federated network using proof-of-storage as a consensus mechanism. Initially it was called “Nimbus,” then “Bytecoin” (a name shared by a dozen other altcoins…) before he found “Sia” while searching through lists of deities. Sia is the Egyptian deification of wisdom, and his hieroglyph was used to represent knowledge or perception. Sia also happens to be the name of an Australian musician, who released a new album to critical acclaim just a few months after we announced our project. At the time we were horrified, but in retrospect I just laugh at how poor our timing was.</p>
+
+                <p>[N-] What kind of usage have you seen since your launch?</p>
+
+                <p>[LC] The mining community comprised most of our initial user base, as we expected. Within 3 hours of launching, we observed a network hash rate of 15 GH/s, and it grew steadily from there. (It&#39;s currently sitting around 200 GH/s.) Multiple members of the community have contributed to our open-source GPU miner, optimizing its hash rate, improving its stability, and suggesting changes to our mining API. We are also aware of at least one nascent ASIC miner, though I don&#39;t believe it&#39;s active on the network yet.</p>
+
+                <p>Of course, while Sia could not exist without mining, our true focus is storage. With the network so young, and the value of siacoins rising, it seems people are a bit hesitant to store much data on Sia yet. To address this, we slashed the default storage price, and saw a moderate increase in usage. There are around 1200 file contracts active on the network, comprising 33.34 GB of data. From what I can tell, most of the storage is simply being used to test out the platform. We&#39;ve seen people use it to share memes, inspirational videos, and more. Personally, I like to store Sia on Sia. :P As the network grows in size and stability, we hope to see more people using Sia as a legitimate backup solution or filesharing platform.</p>
+
+                <p>[N-] Yeah, the chicken and egg problem must be a challenge. So speaking of file contracts, can you explain to the readers how Sia works? What do people need to do to store files or sell their drive space?</p>
+
+                <p>[LC] Storage on Sia is enabled through the use of file contracts. When you want to upload a file, you first negotiate a file contract with a host, and then transmit the file contents to them. Among other things, the file contract specifies how long the file will be stored and how much the host will be paid. It also mandates that a host must submit a storage proof to the network at a specified time. This constitutes a cryptographic proof that the host still has the file at the end of the contract duration. If the host submits a valid proof, they receive payment; otherwise they are penalized (they forfeit a “security deposit”).</p>
+
+                <p>Hosts can advertise themselves by announcing their IP address on the blockchain. Renters will then probe these IP addresses to learn what contract terms a host is willing to agree to. They use this information to build a database of potential hosts, which lets them select only the most attractive (e.g. cheapest) hosts.</p>
+
+                <p>Of course, to the average user, this process is invisible. To store a file, just click the “Upload File” button. To become a host, just enter your desired contract settings and hit “Announce.” The software will take care of the rest.</p>
+
+                [N-] Are there any ways Sia&#39;s functionality could be extended? For example, could it be used as a storage system for websites?</p>
+
+                <p>[LC] Our vision for Sia has always been lower-level than apps like Dropbox or Google Drive. We&#39;d like to see it used interchangeably with physical hard drives. Big websites aren&#39;t storing their content on a cloud storage app, they&#39;re using Amazon S3 or a private datacenter. So we aim to be a viable alternative for those sites, offering cheap bulk storage with built-in redundancy, speed, and security.</p>
+
+                <p>Of course, the cryptographic and economic aspects of Sia make it possible to do much more than that. The key is to make files as easily-accessible as possible, and we&#39;re tackling that in a few different ways. Will we see a future where you can type sia://[hash] into your browser and get back a website? Probably not. But it&#39;s not at all far-fetched to imagine Sia-based versions of Vimeo, Spotify and MEGA. Ultimately, Sia&#39;s eventual role in storage will be determined by its users, not us.</p>
+
+                <p>[N-] How does Sia compare with its main competitor Storj.io?</p>
+
+                <p>[LC] We&#39;ve talked to Storj&#39;s creator, Shawn Wilkinson, a number of times, as well as IPFS and Ethereum. I think there&#39;s a shared understanding that while in practice we are competitors, in principle we are all working towards a common ideal, and at the end of the day we all want the best technology to win.</p>
+
+                <p>Our primary advantage over Storj and others is that we work, right now. You can download Sia today and start storing files on it or earning siacoins as a host. In other words, we aren&#39;t vaporware, and that earns us a lot of favor in the cryptocurrency space, where users are tired of hearing empty promises.</p>
+
+                <p>From a technical standpoint, Sia and Storj are fairly similar. Both use a blockchain to store file metadata, Merkle trees to calculate storage proofs, and erasure codes to prevent data loss. I would say that in a broad sense, the difference is that the Sia is more “hands-off” than Storj; many features of Storj, such as automatic file repair, reputation systems, uptime monitoring, etc. are not built into Sia by default, but rather left to the user. We feel that there is a real risk of over-architecting a protocol and consequently limiting the user&#39;s freedom. But we acknowledge that a certain set of features *must* be mandated in a protocol in order to guarantee an acceptable quality of service for all users. It&#39;s tough to know where to draw the line.</p>
+
+                <p>I will say that Storj has excelled in marketing their product and building a user base. Our approach has been to remain in “stealth mode” until we have something that works. We are programmers, not designers, so our branding is nothing flashy. Now that we&#39;ve launched Sia, we can devote some time to making it look nice and getting the word out. :)</p>
+
+                <p>[N-] Very cool. So, how does Sia work in terms of user privacy and anonymity?</p>
+
+                <p>[LC] Right now, our goals are similar to those of the Tox project: we do not guarantee anonymity, only privacy. Specifically, all files are automatically encrypted, but network traffic is not obfuscated or anonymized. So by snooping on the network, you can learn things like “this IP address announced itself as a host”, or “this IP address uploaded data to that IP address, and downloaded it two days later,” or “this IP address was the first to broadcast this transaction.” Full anonymity would be a nice thing to have, but at present it is not a priority for Sia. We are much more concerned with keeping your data private, and because we&#39;re targeting a more specific use-case than, e.g. Bitcoin, we feel that this focus is appropriate. If you want to hide your IP address, it&#39;s probably feasible to route Sia traffic through Tor. I don&#39;t know that anyone has tried yet though.</p>
+
+                <p>For the crypto-nerds, our current encryption scheme is Twofish as a stream cipher in OFB mode. The IV is always empty, but keys are never reused. While we are confident in the security of this scheme, we are open to suggestions as to how it could be improved. You are, of course, free to encrypt your data with whatever scheme you see fit before uploading to Sia.</p>
+
+                <p>[N-] Good point. What was the thinking behind using Siacoin instead of the most widely used cryptocurrency, Bitcoin?</p>
+
+                <p>[LC] Originally, Sia was conceived as a radical departure from Bitcoin&#39;s consensus model. We intended to use proof-of-storage as our consensus mechanism, without requiring a blockchain or traditional mining at all. But after a good deal of theoretical work and prototyping, we decided that the model had inescapable security vulnerabilities, and we were forced to scrap everything and start over. What we wound up with is very close to Bitcoin; essentially “Bitcoin plus file contracts.” The nice thing about Bitcoin is that it has proven that the blockchain works. If you deviate too far from that model, you&#39;re standing on shaky ground, and you have to work that much harder to prove that your platform is secure. That&#39;s a pattern we&#39;re seeing with just about every proposed &quot;Bitcoin 2.0.&quot;</p>
+
+                <p>But back to the original question: Bitcoin isn&#39;t perfect, any of its coredevs can tell you that. It carries some historical baggage; some off-by-one errors and weird protocol rules that can&#39;t be altered without hardforking the network. Furthermore, it would not be a trivial task to store our file contracts in the Bitcoin blockchain. We considered making Sia a sidechain, but the technology wasn&#39;t mature enough at the time to seriously pursue it. Starting from scratch allowed us to learn from the mistakes of Bitcoin and create a protocol specifically tailored to our purposes. Besides, once we&#39;re on an exchange, it will be trivial to convert bitcoins to siacoins as needed.</p>
+
+                <p>[N-] Besides mining, how do people get their own Siacoins? It would be cool to see it on something like ShapeShift.io for instant conversion.</p>
+
+                <p>[LC] We hope to have siacoins available on exchanges soon. There are a few tweaks we need to make to our software to enable this, so that&#39;s a high priority right now. There are also a few ad-hoc trading threads on forums, IRC, and Slack.</p>
+
+                <p>[N-] Sia seems like a VC-friendly type of product. Would you remain open-source if you took funding?</p>
+
+                <p>[LC] In fact, we secured a seed investment about a year ago. Now that we&#39;ve launched, we&#39;re gearing up for a Series A round, which will allow us to expand our team.</p>
+
+                <p>Fortunately, this isn&#39;t the 90s, and today&#39;s tech-savvy investors understand that you can build a profitable business around open-source software. We are immeasurably indebted to the open-source community, and we never considered making Sia closed-source. (Any closed-source cryptosystem would be laughed off the Internet anyway.) Perhaps in the future we may build closed-source services on top of Sia, but the core protocol will always remain open-source.</p>
+
+                <p>[N-] I see what you&#39;re saying, but I think users often willingly overlook closed source solutions if they&#39;re are easy to use. I&#39;ve seen it recently with the various crypto tools coming in the wake of the Snowden revelations. The same could be said about BitTorrent. Even though the protocol is open source, if I remember rightly, their client software is not, so you never know if there&#39;s other funky stuff happening on your system.</p>
+
+                <p>[LC] Historically, I think the biggest problem with open-source was that it was restricted to a relatively small community of fellow hackers, who tended not to care about ease-of-use or flashy visual interfaces. It&#39;s no secret that many open-source alternatives are eyesores; just compare Photoshop to GIMP, or Word to LibreOffice. But I think that the gap has narrowed significantly in recent years. Open-source projects are realizing that good design is not incidental, but actually essential. That&#39;s certainly a lesson we&#39;ve taken to heart. I&#39;ll note that Sia has received a number of comments on how its interface is both sleeker and easier to use than Bitcoin&#39;s. :)</p>
+
+                <p>[N-] Cool man, well I think this wraps things up! Thanks to Luke for taking the time, and good luck with Sia. I think this if one to keep an eye on! This If you want to learn more about the project, check out Siacoin.com</p>
+
+
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

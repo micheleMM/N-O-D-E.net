@@ -1,0 +1,140 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                DIGITAL DEAD DROPS: SECRET COMMUNICATION IN PLAIN SIGHT<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>According to Wikipedia, &quot;dead drops&quot; are a type of espionage tradecraft which allow individuals to exchange items and information without compromising operational security. They are a passive type of communication which allows people to hide information in plain sight, both physically and on the internet, with the intention of it being picked up at some later time.</p>
+
+                <img src="http://i.imgur.com/SvyapyC.png">
+
+                <p>The idea has been popularized in mainstream entertainment for a long time, and thanks to technology it has made a resurgence recently with things like the Piratebox [http://piratebox.cc/] and USB dead drops [https://deaddrops.com/], although the prospect of plugging a device into a random USB drive sticking out of a wall doesn&#39;t sound like a good security choice (especially with the BadUSB exploit [http://arstechnica.com/security/2014/07/31/this-thumbdrive-hacks-computers-badusb-exploit-makes-devices-turn-evil]).</p>
+
+                <p>Another low-tech passive communication example we saw in 2014 was when the Turkish President Abdullah Gul tried to block social media sites across the country [http://www.nytimes.com/2014/03/22/world/europe/turks-seek-to-challenge-twitter-ban.html], and the resultant pushback by citizens, who spraypainted instructions on walls for how to bypass the censorship [https://ruptly.tv/vod/view/10975/turkey-graffiti-lets-tweets-fly-again].</p>
+
+                <p>There are also many more interesting ways in which people can communicate using digital dead drops - potentially allowing them to bypass surveillance completely:</p>
+
+
+                <p class="subtitle">NEAR FIELD COMMUNICATION</p>
+
+                <p>Reddit user /u/mofosyne/ recently posted a link to a prototype NFC Message Board android app they made [https://play.google.com/store/apps/details?id=com.briankhuu.nfcmessageboard] (Source code [https://github.com/mofosyne/NFCMessageBoard]). It allows people to place cheap, often water resistant NFC tags in pre-defined public places so those wanting to communicate can post and receive short messages to the chip using their smartphones. The messages are currently only plain-text, but there is scope for future development with encrypted signatures in larger capacity NFC tags.</p>
+
+                <p>The really cool thing here is that you could basically fit these NFC tags into tiny cracks in walls and behind almost anything, and it&#39;d still function. Since the NFC tags need no external power supply, they can potentially last a very long time.</p>
+
+
+                <p class="subtitle">FILE STEGANOGRAPHY</p>
+
+                <p>Steganography [https://en.wikipedia.org/wiki/Steganography] is basically the act of hiding information inside other information so that it is concealed in plain sight.</p>
+
+                <p>One of the most used steganography techniques is employed by many printer manufacturers. Every time you make a printout, tiny yellow dots are included on the page that are invisible to the naked eye, allowing for various types of information to be embedded.</p>
+
+                <p>This makes it perfect for secret communications. For example you could set up an account on imgur, posting your favourite cat pics and gaining reputation and legitimacy. All you would need to do is tell the recipient to follow your account and you could upload images with encrypted messages inside the image code. Everyone outside the involved parties would be oblivious.</p>
+
+                <p>In fact this already happens, just we don&#39;t often hear about it. In 2010, the FBI alleged that their Russian counterparts were using steganography to hide text messages inside images [http://www.justice.gov/sites/default/files/opa/legacy/2010/06/28/062810complaint2.pdf]. It&#39;s not just the reserve of spies though. Developer Josh Lindsay created a PHP program named &quot;BuriedUnderTheNoiseFloor&quot; [https://github.com/jspark311/BuriedUnderTheNoiseFloor] which compresses, encrypts and hides messages inside PNG files.</p>
+
+
+                <p class="subtitle">BLOCKCHAIN STEGANOGRAPHY</p>
+
+                <p>What happens when you take that a step further and distribute steganography? The Bitcoin blockchain provides a way to hide information inside a distributed, immutable ledger. There are already a few different ways to add information directly into the ledger [http://www.righto.com/2014/02/ascii-bernanke-wikileaks-photographs.html] [http://bitcoinstrings.com/] [http://coinsecrets.org/].</p>
+
+                <p>You could also do something else like sending tiny transactions to a specific address and having the numbers relate to a predefined cypher which changes it to a text message. There&#39;s also a Bitcoin blockchain IRC idea [http://www.loper-os.org/?p=1490].</p>
+
+                <p>These kinds of systems would have various advantages:</p>
+
+                <p>- The transactions will just look like ordinary Bitcoin transactions on the blockchain<br>
+                - Your internet traffic only shows Bitcoin traffic<br>
+                - You can download the full blockchain locally and query it for messages offline, leaving no footprint<br>
+                - If the broadcaster has secured their keys correctly, anyone reading can be 100% sure that the messages are legitimate.<br>
+                - Since the ledger is open and distributed, you can access your messages on any platform or device, anywhere.</p>
+
+
+
+                <p class="subtitle">BITMESSAGE BROADCASTS</p>
+
+                <p>Bitmessage [http://bitmessage.org/] is a distributed message platform that allows you to send and receive encrypted messages without email/chat service providers. When you send a message, it broadcasts it out to a pool of messages in the network and can be collected by the recipient at a later date. This means both the message content and meta data is private.</p>
+
+                <p>There are also services like DarkLogs [http://darklogs.com/] created by Adam Thorsen which allow you to anonymously create and update a blog using Bitmessage. You just send a message to the darklogs address and it automatically pushes it to your blog. The cool thing is that you can do all this through Tor [https://torproject.org/] if you want, plus the code is open source [https://github.com/awt/turqlom] so it&#39;s possible to create your own version too.</p>
+
+                <p>The disadvantage of the Bitmessage method over blockchain steganography is that if someone was specifically looking for your communications they may see a footprint left behind and may be able to infer further information from traffic analysis [https://en.wikipedia.org/wiki/Traffic_analysis].</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>If the goal is information security and privacy, then you need to have good endpoint security (and general opsec), so if your devices are already compromised before you use a dead drop, then it is insecure to use. The same is true about how you initially generate and exchange information about dead drop locations and any encryption keys.</p>
+
+                <p>Besides that, passive communications give you a way to exchange information in an extremely secure way. Admittedly it&#39;s impractical for most people to use, but I still think it&#39;s an intellectually interesting concept. It gives you options, regardless of whether you want to pretend to be James Bond, or if more seriously, you live under an oppressive regime which aims to stifle your speech.</p>
+
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

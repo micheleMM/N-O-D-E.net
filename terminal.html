@@ -1,0 +1,204 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HOW TO CREATE A HANDHELD LINUX TERMINAL<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This tutorial will teach you how to create your own handheld linux terminal with built in screen, QWERTY thumb keyboard and battery. It has four passive USB ports for expansion and extra connectivity. It&#39;s super portable and is about the size of a Nintendo DS (if slightly thicker).</p>
+
+                <p>I initially made it because I thought it&#39;d be cool to fit down into such a small form-factor, but it also has some interesting purposes. It&#39;s basically a full handheld linux system that can do almost everything a normal sized computer can do. It&#39;s not going to destroy any benchmark tests, so it&#39;s best suited to command line stuff. Since this is the case, it&#39;s actually a pretty good tool for learning the command line interface as well as basic scripting. The keyboard has all the special characters you need which is really handy.</p>
+
+                <p>Almost all the design choices here are made entirely out of necessity for space. If I had a chance to make a custom keyboard and case, it&#39;d be alot sleeker. Considering it&#39;s a bunch of off the shelf stuff, I think it turned out pretty nicely.</p>
+
+                <img src="http://i.imgur.com/3UzuIsv.png">
+
+
+                <p class="subtitle">PHOTOS</p>
+
+                <p>
+                - <a href="http://i.imgur.com/ZVdjSLh.jpg" target="_blank">Front view</a><br>
+                - <a href="http://i.imgur.com/3PKG9qb.jpg" target="_blank">Opened flat</a><br>
+                - <a href="http://i.imgur.com/WF22noM.jpg" target="_blank">Closed</a><br>
+                - <a href="http://i.imgur.com/omuORN6.jpg" target="_blank">Size comparison against 11inch Macbook Air</a>
+                </p>
+
+
+                <p class="subtitle">PARTS</p>
+
+                <p>
+                - Raspberry Pi A+ (700MHz, 256MB RAM)<br>
+                - 4 Port USB hub (make sure it&#39;s compatible with the Ras Pi)<br>
+                - 500mAh+ battery with JST connector<br>
+                - Adafruit PiTFT - 2.8" Raspberry Pi Touchscreen<br>
+                - Adafruit Powerboost 500 Charger<br>
+                - 2x 2.5inch plastic hard drive enclosures (perfect size for a case)<br>
+                - Wireless 2.4GHz Mini thumb backlit keyboard<br>
+                - Power switch with JST connectors<br>
+                - Piano hinge (thickness depends on your case)<br>
+                - 16GB micro sd card (larger the better)<br>
+                - Micro USB male component<br>
+                - Some spare wires
+                </p>
+
+
+                <p class="subtitle">TOOLS</p>
+
+                <p>
+                - Soldering iron / solder<br>
+                - Desolder pump<br>
+                - A fine-ass file<br>
+                - Power drill<br>
+                - Small hacksaw blade<br>
+                - Solder wick/tape (optional)<br>
+                - Wire cutters / strippers<br>
+                - Needle nose plyers (optional)<br>
+                - Hot glue gun (optional)<br>
+                - Insulating tape<br>
+                - Helping hands stand (optional)<br>
+                </p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - SOFTWARE</p>
+
+                <p>We&#39;re going to get the software side of things sorted first before we start hacking up the hardware.</p>
+
+                <p>Step 1. Ok, first things first. Since this RasPi uses the PiTFT display, you&#39;re limited to using Raspbian because (I think) it&#39;s the only distro that supports the displays drivers. Go to this page on Adafruit&#39;s site [https://learn.adafruit.com/adafruit-pitft-28…] to download their custom Raspbian image which already contains the drivers. Follow the instructions, write it to your Micro SD and boot up your Pi.</p>
+
+                <p>It&#39;s worth noting that this custom distro only boots up properly when the PiTFT is attached.</p>
+
+                <p>Step 2. When you boot up your Pi, make sure that you have the receiver dongle for the wireless 2.4GHz mini keyboard connected. It should automatically recognize it without any additional tinkering required. If you plan on using a mini wired keyboard that should work fine too.</p>
+
+                <p>You&#39;ll notice that the standard font used in the command line is a bit derpy, so we&#39;re going to change that up since the screen realestate is so important. Type the following and press enter:</p>
+
+                <span class="code">sudo dpkg-reconfigure console-setup</span>
+
+                <p>This will bring up a menu which allows you to change the font and the size. Have a play around to see what you like. When you&#39;re finished reboot the Pi by typing:</p>
+
+                <span class="code">sudo reboot</span>
+
+                <p>Step 3. That&#39;s it! Now you have a usable Linux base system that you can experiment with how you like.</p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - HARDWARE</p>
+
+                <p>Step 1. Slice that Pi! Ok, once you&#39;ve gotten all the hardware working correctly, you&#39;ll need to remove all the extraneous components that we don&#39;t absolutely need. That means basically removing everything including:</p>
+
+                <p>- GPIO pins<br>
+                - HDMI port<br>
+                - USB port<br>
+                - Audio/Mic port<br>
+                - 2x camera module ports<br></p>
+
+                <p>This isn&#39;t really that hard to do, you just need to be really careful and take your time. Not everything will be easy to desolder from the board, and often I resorted to using the mini hacksaw blade + the sharp wire cutters to literally hack it apart. As long as you don&#39;t break any of the other components or scratch the board surface, you should be good. You now have a super slim Raspberry Pi that&#39;s around 5-6mm thick! [http://i.imgur.com/8pifHrR.jpg]</p>
+
+                <p>Step 2. Remove and shorten the GPIO pins on the PiTFT. One thing to note, if you can get the unassembled version of the PiTFT that will save tonnes of time and possible headache. The solder on these boards seem like they need a pretty hot soldering iron to melt, so bare that in mind too. Again, it&#39;s not particularly difficult, it just takes a long-ass time.</p>
+
+                <p>Step 3. Solder the PiTFT directly to the A+. You can use the GPIO pins you took off either of the other boards if you like. I originally tried doing it with a load of small wires, but that turned out to be pretty tricky. I ended up using the metal pins from a bunch of unused LEDs I had lying around.</p>
+
+                <p>This is super fiddly work, and I found the best way was to solder the pins directly to the Pi, then once attached, straighten and trim them until they were uniform. Then hopefully you can slot the PiTFT ontop and solder it in place. I inserted a piece of thin plastic in between the boards so they wouldn&#39;t short each other. The reason for doing it this way is that you end up with a ridiculously small all in one package of the Pi+Display which is about 1cm thick. [http://i.imgur.com/di5cvwy.jpg]</p>
+
+                <p>Step 4. Power up the Pi and cross your fingers. If it boots up and the screen turns on that&#39;s good. If not, I&#39;d first check the connector which joins the display to the PiTFT board and see if it is in all the way. If it is, check your handywork on the GPIO pins.</p>
+
+                <p>Step 5. Chop up your USB hub. You need to remove it from it&#39;s plastic casing, desolder each of the USB ports, remove any LEDs or anything that doesn&#39;t 100% need to be on the board and then strip the main USB wire that the supplies power and data info. These things seem to be ridiculously fragile and badly made (I went through 4 fucking hubs!) so be careful.</p>
+
+                <p>Step 6. Prep your case. Depending on what kind of enclosure you want to use, this is probably the time to get it ready. Here are the things I did:</p>
+
+                <p>- Cut holes out for the screen/keyboard
+                - Drill holes and attach the hinge
+                - Chop out some holes for the USB ports (the hacksaw blade is very handy here)
+                - Drill a hole in the side for the USB wires that connect the top and bottom case halves.
+                - Cut hole in the side for the switch</p>
+
+                <p>I did all my cutting with a sharp craft knife. Measure everything a few times so you know you&#39;ve got it right and take your time whilst cutting. If you make mistakes, you could always cover over them with vinyl tape or something. [http://i.imgur.com/vNrVjmK.jpg]</p>
+
+                <p>Step 7. Wire up the powerboost, battery and switch. I used a standard type of switch that you can buy for RC cars. It was bigger than expected so I had to chop it down. Also the JST connectors can be a bit bulky so I hacked up the female sockets and soldered the wires directly to the powerboost.</p>
+
+                <p>I added the micro usb plug to a wire so I could connect the Pi directly to the powerboost. Unfortunately I didn&#39;t have enough room or spare parts to wire up the charging port, but I can still charge the battery manually no problem.</p>
+
+                <p>If your battery and switch work correctly, when you switch it on, a blue LED will come on for the powerboost.</p>
+
+                <p>Step 8. Cram everything into the case, plug in the micro USB to the Pi and switch on the power. If everything goes well, it should boot up. You now have a handheld linux terminal! </p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>If I was to make this again, I would do a few things differently. First I&#39;d probably add a slightly larger screen like this one from Tindie [https://www.tindie.com/products/hwlevel/40-ips-screen-for-raspberry-pi/]. I&#39;d also figure out an easier way to add charging ports directly onto the case so that I wouldn&#39;t have to open it up to charge the batteries in both halves.</p>
+
+                <p>I&#39;m thinking about how I could use this way of creating inexpensive hardware to make a touchscreen open source phone (using the Adafruit Fona), or perhaps a mini tablet or something.</p>
+
+                <p>Hope you enjoyed and if you end up making your own version, I&#39;d love to see it. </p>
+
+
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

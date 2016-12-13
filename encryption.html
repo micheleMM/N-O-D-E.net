@@ -1,0 +1,124 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                SIMPLE FILE ENCRYPTION FOR MAC/LINUX<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>Here is a quick, simple way to encrypt your files and the cool thing is that it&#39;s available to anyone using Mac or Linux. This utility comes pre-installed on nearly all these systems, so you don&#39;t need to download anything.</p>
+
+                <p>It&#39;s name is OpenSSL, which you probably heard from with the heartbleed vunerability that hit the news early this year. Fortunately for us, this only affects OpenSSL when it&#39;s doing network connected stuff (afaik), so everything here should be secure.</p>
+
+                <p>Ok, so what you&#39;re going to need for this tutorial is access to the command line aka, the terminal. On macs it&#39;s located in Applications > Utilites and on Linux it&#39;s usually availble through the menu Applications > Accessories or something similar. Just look for the app named Terminal.</p>
+
+                <p>TIP: If you want to learn more about OpenSSL, open up terminal, type in &#39;man openssl&#39; (without quotes) and press enter. To exit press q</p>
+
+
+                <p class="subtitle">ENCRYPTING FILES</p>
+
+                <p>Make sure you have the terminal app open and you have the file you want to encrypt at hand. If you want to encrypt multiple files inside one encrypted container, it&#39;s easier if you compress all these files into a .zip or something first.</p>
+
+                <p>In this example the file you want to encrypt will be on the desktop and so will the encrypted file.</p>
+
+                <p>Type the following into terminal (all on one line), then press enter. We&#39;ll go over what each section means:</p>
+
+                <span class="code">openssl aes-256-cbc -in ~/Desktop/File.jpg -out ~/Desktop/Encrypted.File</span>
+
+                <p>- openssl. This tells the terminal to start the openssl utility.</p>
+
+                <p>- aes-256-cbc. This is the encryption cipher we&#39;ll be using for this example. There are many different ones to choose from. Find out more about them by typing ‘man openssl&#39; in your terminal window.</p>
+
+                <p>- -in ~/Desktop/File.jpg. This tells openssl that the input file (the one you want to encrypt) is File.jpg. If you don&#39;t want to type out the full path for the file, you could just type “-in ” and drag the file into the terminal.</p>
+
+                <p>- -out ~/Desktop/Encrypted.File. This is the output file you will get. You can name it pretty much anything you like.It&#39;s worth noting that you may run into problems if you name the output file the same as the input.</p>
+
+                <p>After you press enter, you&#39;ll be asked to enter an encryption password, and then to verify it. Make sure it&#39;s complex.</p>
+
+                <p>Now if you check your desktop, you should have a new “Encrypted.File” file sitting there. This is an encrypted version of your original File.jpg. These encrypted files are perfect for emailing and uploading to services like dropbox, since they&#39;re cocooned and impenetrable to passive snooping.</p>
+
+
+                <p class="subtitle">DECRYPTING FILES</p>
+
+                <p>With a terminal window open, type the following and press enter:</p>
+
+                <span class="code">openssl aes-256-cbc -d -in ~/Desktop/Encrypted.File -out ~/Desktop/File.jpg</span>
+
+                <p>You&#39;ll notice that this is almost identical to the command for encrypting, except for a few things:</p>
+
+                <p>- -d is included which tells openssl you want to decrypt the file</p>
+
+                <p>- The -in file is now the Encrypted.File and the “-out” is the original File.jpg.</p>
+
+                <p>After you press enter it&#39;ll ask for the decryption password. Enter it and your original file will be ready to use again.</p>
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>

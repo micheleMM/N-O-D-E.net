@@ -1,0 +1,177 @@
+<!-- 
+=============================
+    _   ______  ____  ______
+   / | / / __ \/ __ \/ ____/
+  /  |/ / / / / / / / __/   
+ / /|  / /_/ / /_/ / /___   
+/_/ |_/\____/_____/_____/   
+
+=============================
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N O D E</title>
+    <meta name="google-site-verification" content="KAh0wcTC2Anz5ea6Kq26RuhsiUKx5FD3D4HZAJdfaf4" />
+    <link rel="shortcut icon" href="images/avatar.png">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+
+<body>
+    
+    <div id="page">
+        <div id="content">
+
+        <!--HEADER SECTION -->
+        <div id="header"><pre>
+<a class="node" href="http://n-o-d-e.net">
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215; 
+&#215;&#215;&#215;  &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215; &#215; &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;&#215;&#215;&#215;   
+&#215;&#215;  &#215;&#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;   &#215;&#215;      
+&#215;&#215;   &#215;&#215;    &#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;    &#215;&#215;&#215;&#215;&#215;&#215;</a> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+            </div>
+
+            <!--CONTENT -->
+            
+            <div id="list">
+
+                <div class="title">
+                HOW TO CREATE A TINY WIFI FILE-SHARING BEACON<br>
+                --
+                </div>
+
+
+                <div id="post">
+                <p>This tutorial will show you how to make a tiny wifi file-sharing beacon. It&#39;s a battery powered wifi access point for the contents of a micro SD card, and up to 5 people can simultaneously connect to it&#39;s network and download the files. It has many of the same uses as the much revered PirateBox, and costs about the same, but the main differences are this one uses different technology, it has a rechargeable battery, removable micro SD card, and at the size of about a tall box of tic-tacs, it&#39;s way smaller.</p>
+
+                <p>It utilizes the &quot;ez Share&quot; micro SD wifi adapter, which are usually used for transferring files from digital cameras wirelessly to other devices for quick review. I guessed that if you could deliver power to the card (via battery or USB), it would auto initiate the wifi access point, making the camera redundant. To my surprise it actually worked!</p>
+
+                <p>You&#39;ll need some basic soldering skills to make this, but other than that it&#39;s really simple to make. All the parts are readily available and the total build cost is around $35 (depending on where you get everything).</p>
+
+                <img src="http://i.imgur.com/jWHqxAr.png">
+
+
+                <p class="subtitle">PHOTOS</p>
+
+                <p>
+                - <a href="http://i.imgur.com/Df0NeAZ.jpg" target="_blank">Turned on</a><br>
+                - <a href="http://i.imgur.com/Pf68jCR.jpg" target="_blank">Size comparison</a><br>
+                - <a href="http://i.imgur.com/QLxi2ip.jpg" target="_blank">Size comparison 2</a><br>
+                - <a href="http://i.imgur.com/T2TUWwl.jpg" target="_blank">Charging</a><br>
+                - <a href="http://i.imgur.com/vIH92V6.jpg" target="_blank">Removable micro SD slot</a>
+                </p>
+
+
+                <p class="subtitle">PARTS / MATERIALS</p>
+
+                <p>
+                - ez Share micro SD wifi adapter<br>
+                - Adafruit PowerBoost 500C<br>
+                - Lipo battery (I choose 150mAh for super small size, but you can use whatever you want/have)<br>
+                - Switch<br>
+                - Micro SD card<br>
+                - Solder<br>
+                - Spare wires<br>
+                - Some scrap plastic (whatever you want for your casing)<br>
+                - Insulating tape<br>
+                - Heatshrink tubing<br>
+                - Super glue
+                </p>
+
+
+                <p class="subtitle">TOOLS</p>
+
+                <p>
+                - Soldering iron<br>
+                - Wire cutter / stripper<br>
+                - Helping hands stand (optional)<br>
+                - Scissors / craft knife / mini hacksaw blade (this is all optional, it&#39;s basically whatever you need to make your particular case)
+                </p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - SOFTWARE SETUP</p>
+
+                <p>Step 1. The software on the access point is pretty finnicky, so you have to first format the micro SD card you&#39;re going to use in a digital camera.</p>
+
+                <p>Step 2. Connect the sd card to a USB adapter and plug it into your computer. This should automatically power up the wifi access point.</p>
+
+                <p>Step 3. Look for the wifi network &quot;ez Share&quot; and connect to it. Use the password 88888888</p>
+
+                <p>Step 4. Open your browser and type anything into the address bar and press enter. It should automatically redirect to the card. One thing to note is that you need Javascript enabled for it to work.</p>
+
+                <p>Step 5. At the top, click &quot;Change Configuration&quot;. Enter the default admin password which is “admin” (minus quotes). Click confirm.</p>
+
+                <p>Step 6. Now you can change your admin password, network SSID, network password and the wifi channel you want to broadcast on.</p>
+
+
+                <p class="subtitle">HOW-TO GUIDE - HARDWARE</p>
+
+                <p>Step 1. Get two wires (black and red), strip the ends and tin them. The first thing we need to do is solder them to the correct pins on the underside of the SD card. I checked the wikipedia page on SD cards [https://en.wikipedia.org/wiki/Secure_Digital#Transfer_modes] and found that power (red wire) should be connected to pin 4 and ground (black) connected to either pin 3 and/or 6. You&#39;ve got to be careful here because the plastic on the card has a very low melt point. [http://i.imgur.com/BPE0WIs.jpg]</p>
+
+                Step 2. We now need to solder the other end of these two wires to the Adafruit Powerboost. The red wire goes to the &quot;5V&quot; power pin and the black to the &quot;GND&quot; sitting next to it. Note that the photo shows the Powerboost 500 (not the 500C which I changed to later on), but the pins we need are the same for both. [http://i.imgur.com/6YDM7Dr.jpg]
+
+                Step 3. Next we need to hack up the case we&#39;re going to be using. In my case I found a random piece of plastic from an old tablet that just happened to be the right size. I used the mini hacksaw blade and a file to get it to the size I wanted. [http://i.imgur.com/mejSNgu.jpg]
+
+                Step 4. Make the power circuit. I soldered up the switch and battery to the Powerboost. I ended up chopping up the JST connector to save space (Alternatively, I could have used the pins on the right, but there wasn&#39;t much room). [http://i.imgur.com/e53wuDq.jpg]
+
+                Step 5. Flick the switch and see if it&#39;s still working! Hopefully if it does, the lights will come on and you&#39;ll be able to connect to the network. [http://i.imgur.com/NXp8IeU.jpg]
+
+                Step 6. Finish the case. I basically used a bunch of junk plastic I had lying around and some stick-on vinyl sheeting to make it look less shit. I noticed that the power LED on the PowerBoost was in the middle of the case so I popped a hole through so it&#39;d show when powered on [http://i.imgur.com/HSNdfku.jpg]
+
+                Step 7. That should be it! With your new creation safely cocooned inside it&#39;s enclosure, power up and conquer the world (or something like that) [http://i.imgur.com/cLiOVQn.jpg]</p>
+
+
+
+                <p class="subtitle">USING THE BEACON</p>
+
+                <p>To download the files via wifi, all you need to do is turn it on, join the WPA2 network, enter the password and go through the files using your browser. It should work on any device that has a web browser.</p>
+
+                <p>I haven&#39;t (yet) found a way to upload files directly to the beacon, but I have a feeling some clever person might be able to figure out how to unlock the firmware somehow and enable it. This could also be seen as a security feature too though, so whatever.</p>
+
+                <p>One other point to mention is that since it&#39;s designed primarily to be used by digital cameras, the UI only shows files with image file extensions. You can easily get around this by naming your non image and video files like myfile.pdf.jpg and renaming once you download. Again, this could be fixed once someone figures out how to change the base files used by the access point.</p>
+
+
+                <p class="subtitle">CONCLUSION</p>
+
+                <p>So there you have it. A pretty small and simple way to transfer files offline. Something like this might be useful in work and education scenarios. I could imagine this being helpful if you give it a constant power supply, especially in situations where constantly changing users need to download similar files like in a school, meetup, convention, campus or library etc.</p>
+
+                <p>You could also probably make the whole thing much smaller by getting rid of the PowerBoost and connecting the battery directly to the wifi card. I didn&#39;t want to risk frying the card so I didn&#39;t try it myself.</p>
+
+                <p>If I had access to a 3D printer I&#39;d make a much nicer enclosure, but this one works, even if it is a little wonky in places.</p>
+
+                <p>Like I mentioned above, there&#39;s probably room to make this even more useful and with custom interfaces and added functionality if it&#39;s possible to get into the config files on the access point.</p>
+
+                <p>--<br>
+                BY NODE</p>
+
+                </div>
+
+
+            </div>
+            
+            <!--FOOTER SECTION -->
+
+            <div id="footer">
+                <pre>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</pre>
+                <div class="filter">
+                <a href="http://n-o-d-e.net">HOME</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a href="http://N-O-D-E.net/shop/">SHOP</a>
+                
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="http://patreon.com/N_O_D_E_">PATREON</a>
+
+                <span class="footdogs">  &#215; </span>
+                <a target="_blank" href="https://github.com/N-O-D-E/N-O-D-E.net">GITHUB</a>
+                </div>
+
+        </div>
+
+</body>
+</html>
