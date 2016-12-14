@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+  <title>N O D E</title>
+  <link>https://N-O-D-E.net</link>
+
+  <image>
+      <url>https://N-O-D-E.net/images/avatar.png</url>
+      <link>https://N-O-D-E.net</link>
+  </image>
+
+  <item>
+      <title>NODE UPDATES</title>
+      <link>http://n-o-d-e.net/node_updates.html</link>
+  </item>
+
+  <item>
+      <title>DEAD DROP 10 / GOOLIGAN, BITLOCKER VULN, CRYPTO 101, CREDIT CARD HACK, PROJECT X</title>
+      <link>http://n-o-d-e.net/dd10.html</link>
+  </item>
+
+  <item>
+      <title>CYBER DUMP 33 / TETHERED DRONE, ADRIAN ASSISTANT, VR BACKPACK, BITMESSAGE 101</title>
+      <link>http://n-o-d-e.net/cd33.html</link>
+  </item>
+
+  <item>
+      <title>BITMESSAGE 101: P2P PRIVATE MESSAGING</title>
+      <link>http://n-o-d-e.net/bitmessage.html</link>
+  </item>
+
+  <item>
+      <title>DEAD DROP 9 / NAVY BREACH, RIOT ENCRYPTION, MICROPHONE HEADPHONES, UNSECURED WIFI</title>
+      <link>http://n-o-d-e.net/dd09.html</link>
+  </item>
+
+  <item>
+      <title>CYBER DUMP 32 / 3D PRINTED SMG, SOLAR ISLAND, RPI SATELLITE RECEIVER, ACCURATE VR TRACKING</title>
+      <link>http://n-o-d-e.net/dd10.html</link>
+  </item>
+
+  <item>
+      <title>PRIVATE COMMUNICATION ON THE CLEARNET</title>
+      <link>http://n-o-d-e.net/clearnet.html</link>
+  </item>
+
+  <item>
+      <title>THE ZAMEK HARDWARE PASSWORD MANAGER (EARLY LOOK)</title>
+      <link>http://n-o-d-e.net/zamek.html</link>
+  </item>
+
+  <item>
+      <title>DEAD DROP 08 / 1984 IS HERE, LOCKSCREEN BYPASS, POISONTAP, FAST IOT INFECTIONS</title>
+      <link>http://n-o-d-e.net/dd08.html</link>
+  </item>
+
+  <item>
+      <title>CYBER DUMP 31 / PI ZERO PRISM, AI EXPERIMENT, DRONE SWARMS, CHEAPER VR</title>
+      <link>http://n-o-d-e.net/cd31.html</link>
+  </item>
+
+</channel>
+</rss> 
